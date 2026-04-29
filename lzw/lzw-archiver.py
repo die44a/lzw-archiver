@@ -60,7 +60,7 @@ class LZWArchiver():
                 out.write(dictionary[prefix].to_bytes(2, 'big'))
             
             
-    def decode(self input_file, output_file=None):
+    def decode(self, input_file, output_file=None):
         """_summary_
             Decodes file encoded by LZW algorithm
         Args:
@@ -70,7 +70,4 @@ class LZWArchiver():
         Raises:
             FileNotFoundError: If input file doesn't exist throws this exception
         """
-    
-if __name__ == "__main__":
-    a = LZWArchiver()
-    a.encode("1.in")
+        pass
