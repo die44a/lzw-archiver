@@ -3,16 +3,26 @@ A class that implements archiving and unarchiving
     using the LZW algorithm
 """
 
-import os
+from pathlib import Path
 
 class LZWArchiver():
-
     DICT_SIZE_LIMIT = 65535
+    DEFAULT_MAX_DICT = 4096
+    BYTE_ORDER = 'big'
 
-    def __init__(self, max_dict_size=4096):
+    def __init__(self, max_dict_size=DEFAULT_MAX_DICT):
         self.max_dict_size = min(max_dict_size, self.DICT_SIZE_LIMIT)
+        
+        
+    def _init_encode_dict(self):
+        return {bytes([i]): i for i in range(256)}
     
-    def encode(self, input_file, output_file=None):
+    
+    def _init_decode_dict(self):
+        return {i: bytes([i]) for i in range(256)}
+    
+    
+    def encode(self, input_path, output_path=None):
         """_summary_
             Encodes file using LZW algorithm
         Args:
@@ -23,18 +33,18 @@ class LZWArchiver():
             FileNotFoundError: If input file doesn't exist throws
         """
         
-        if not os.path.exists(input_file):
-            raise FileNotFoundError(f"Input file doesn't exist: {input_file}")
+        input_path = Path(input_path)
         
-        if output_file is None:
-            output_file = input_file + ".lzw"
+        if not input_path.exists():
+            raise FileNotFoundError(f"Input file doesn't exist: {input_path}")
         
-        dictionary = {bytes([i]) : i for i in range(256)}
-        curr_code = 256
+        output_path = Path(output_path or input_path.with_suffix(input_path.suffix + ".lzw"))
+        dictionary = self._init_encode_dict()
+        next_code = 256
         
-        #header = b'LZW' + self.max_dict_size.to_bytes(2, 'big')  # TODO: write down file header
+        #header = b'LZW' + self.max_dict_size.to_bytes(2, self.BYTE_ORDER)  # TODO: write down file header
         
-        with open(input_file, 'rb') as f, open(output_file, 'wb') as out: # Go throught file byte by byte
+        with open(input_path, 'rb') as f, open(output_path, 'wb') as out: # Go throught file byte by byte
             #out.write(header) TODO: write down file header
         
             prefix = b''
@@ -48,19 +58,19 @@ class LZWArchiver():
                     prefix = pc
                     continue
                     
-                out.write(dictionary[prefix].to_bytes(2, 'big'))    
+                out.write(dictionary[prefix].to_bytes(2, self.BYTE_ORDER))    
                 
-                if curr_code < self.max_dict_size:
-                    dictionary[pc] = curr_code
-                    curr_code += 1
+                if next_code < self.max_dict_size:
+                    dictionary[pc] = next_code
+                    next_code += 1
                     
                 prefix = byte
             
             if prefix:
-                out.write(dictionary[prefix].to_bytes(2, 'big'))
+                out.write(dictionary[prefix].to_bytes(2, self.BYTE_ORDER))
             
             
-    def decode(self, input_file, output_file=None):
+    def decode(self, input_path, output_path=None):
         """_summary_
             Decodes file encoded by LZW algorithm
         Args:
@@ -70,27 +80,28 @@ class LZWArchiver():
         Raises:
             FileNotFoundError: If input file doesn't exist throws this exception
         """
-        if not os.path.exists(input_file):
-            raise FileNotFoundError(f"Input file doesn't exist: {input_file}")
+        input_path = Path(input_path)
         
-        name, extension = os.path.splitext(input_file)
+        if not input_path.exists():
+            raise FileNotFoundError(f"Input file doesn't exist: {input_path}")
         
-        if extension != '.lzw':
-            raise ValueError(f"File {input_file} must have .lzw extension")
+        if input_path.suffix != '.lzw':
+            raise ValueError(f"File {input_path} must have .lzw extension")
         
-        if output_file is None:
-            output_file = 'out-' + name
+        if not output_path:
+            original_name = input_path.stem 
+            output_path = input_path.parent / f"decoded_{original_name}"
         
-        dictionary = {i : bytes([i]) for i in range(256)}
+        dictionary = self._init_decode_dict()
         next_code = 256
         
-        with open(input_file, 'rb') as f, open(output_file, 'wb') as out:
+        with open(input_path, 'rb') as f, open(output_path, 'wb') as out:
             
             data = f.read(2)
             if not data:
                 return
             
-            code = int.from_bytes(data, 'big')
+            code = int.from_bytes(data, self.BYTE_ORDER)
             sequence = dictionary[code]
             out.write(sequence)
             
@@ -98,11 +109,14 @@ class LZWArchiver():
                 data = f.read(2)
                 if not data: 
                     break
-                code = int.from_bytes(data, 'big')
+                code = int.from_bytes(data, self.BYTE_ORDER)
                                 
                 if code in dictionary:
                     entry = dictionary[code]
-                elif code == next_code:
+                elif code == next_code:  
+                    # Rare case when encoder havnt added sequence yet
+                    # For examole 'aaaaa' encoded output should be ['97', '256', '256']     
+                    # This only happens if the sequence starts and ends with the same symbol       
                     entry = sequence + sequence[:1]
                 else:
                     raise ValueError(f"Bad compressed code: {code}")
