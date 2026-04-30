@@ -30,7 +30,7 @@ class LZWArchiver():
             output_file = input_file + ".lzw"
         
         dictionary = {bytes([i]) : i for i in range(256)}
-        next_code = 256
+        curr_code = 256
         
         #header = b'LZW' + self.max_dict_size.to_bytes(2, 'big')  # TODO: write down file header
         
@@ -50,9 +50,9 @@ class LZWArchiver():
                     
                 out.write(dictionary[prefix].to_bytes(2, 'big'))    
                 
-                if next_code < self.max_dict_size:
-                    dictionary[pc] = next_code
-                    next_code += 1
+                if curr_code < self.max_dict_size:
+                    dictionary[pc] = curr_code
+                    curr_code += 1
                     
                 prefix = byte
             
@@ -70,4 +70,47 @@ class LZWArchiver():
         Raises:
             FileNotFoundError: If input file doesn't exist throws this exception
         """
-        pass
+        if not os.path.exists(input_file):
+            raise FileNotFoundError(f"Input file doesn't exist: {input_file}")
+        
+        name, extension = os.path.splitext(input_file)
+        
+        if extension != '.lzw':
+            raise ValueError(f"File {input_file} must have .lzw extension")
+        
+        if output_file is None:
+            output_file = 'out-' + name
+        
+        dictionary = {i : bytes([i]) for i in range(256)}
+        next_code = 256
+        
+        with open(input_file, 'rb') as f, open(output_file, 'wb') as out:
+            
+            data = f.read(2)
+            if not data:
+                return
+            
+            code = int.from_bytes(data, 'big')
+            sequence = dictionary[code]
+            out.write(sequence)
+            
+            while True:
+                data = f.read(2)
+                if not data: 
+                    break
+                code = int.from_bytes(data, 'big')
+                                
+                if code in dictionary:
+                    entry = dictionary[code]
+                elif code == next_code:
+                    entry = sequence + sequence[:1]
+                else:
+                    raise ValueError(f"Bad compressed code: {code}")
+                
+                out.write(entry)
+                
+                if next_code < self.max_dict_size:
+                    dictionary[next_code] = sequence + entry[:1]
+                    next_code += 1
+                
+                sequence = entry
