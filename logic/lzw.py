@@ -111,6 +111,9 @@ class LZWArchiver():
     def _read_codes(input_file: BinaryIO) -> Iterator[int]:
         """Reads codes from the file (each code takes CODE_SIZE in te file)"""
         while (code := input_file.read(CODE_SIZE)):
+            if len(code) < CODE_SIZE:
+                break
+
             yield int.from_bytes(code, BYTE_ORDER)
 
     def _codes_to_bytes(self, codes_iter: Iterator[int]) -> Iterator[bytes]:
