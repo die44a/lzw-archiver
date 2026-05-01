@@ -84,6 +84,7 @@ class LZWArchiver():
                 
     @staticmethod            
     def _init_dict(mode: DictMode):
+        """Initializes dictionary for encoding and decoding based on mode"""
         if mode == DictMode.ENCODE:
             return {bytes([i]): i for i in range(256)}
         elif mode == DictMode.DECODE:
@@ -93,11 +94,13 @@ class LZWArchiver():
                 
     @staticmethod
     def _read_bytes(input_file):
+        """Reads bytes from the file one by one"""
         while(byte := input_file.read(1)):
             yield byte
     
     
     def _bytes_to_codes(self, bytes_iter):
+        """Transforms bytes sequence into codes sequence"""
         dictionary = self._init_dict(DictMode.ENCODE)
         next_code = 256
         prefix = b''
@@ -121,11 +124,13 @@ class LZWArchiver():
             
     @staticmethod    
     def _read_codes(input_file):
+        """Reads codes from the file (each code takes CODE_SIZE in te file)"""
         while(code := input_file.read(CODE_SIZE)):
             yield int.from_bytes(code, BYTE_ORDER)
             
     
     def _codes_to_bytes(self, codes_iter):
+        """Transforms codes sequence into bytes sequence"""
         codes_iter = iter(codes_iter)
         try:
             first_code = next(codes_iter)
