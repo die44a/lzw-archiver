@@ -14,19 +14,11 @@ class LZWArchiver():
     DICT_SIZE_LIMIT = 65535
     DEFAULT_MAX_DICT = 4096
     BYTE_ORDER = 'big'
+    CODE_SIZE = 2
 
     def __init__(self, max_dict_size=DEFAULT_MAX_DICT):
         self.max_dict_size = min(max_dict_size, self.DICT_SIZE_LIMIT)
-        
-        
-    def _init_dict(self, mode: DictMode):
-        if mode == DictMode.ENCODE:
-            return {bytes([i]): i for i in range(256)}
-        elif mode == DictMode.DECODE:
-            return {i: bytes([i]) for i in range(256)}
-        else:
-            raise ValueError("Invalid mode")
-    
+            
     
     def encode(self, input_path, output_path=None):
         """_summary_
@@ -45,35 +37,14 @@ class LZWArchiver():
             raise FileNotFoundError(f"Input file doesn't exist: {input_path}")
         
         output_path = Path(output_path or input_path.with_suffix(input_path.suffix + ".lzw"))
-        dictionary = self._init_dict(DictMode.ENCODE)
-        next_code = 256
-        
+                
         #header = b'LZW' + self.max_dict_size.to_bytes(2, self.BYTE_ORDER)  # TODO: write down file header
         
-        with open(input_path, 'rb') as f, open(output_path, 'wb') as out: # Go throught file byte by byte
-            #out.write(header) TODO: write down file header
-        
-            prefix = b''
-            while True:
-                byte = f.read(1)
-                if not byte:
-                    break
-                
-                pc = prefix + byte
-                if pc in dictionary:
-                    prefix = pc
-                    continue
-                    
-                out.write(dictionary[prefix].to_bytes(2, self.BYTE_ORDER))    
-                
-                if next_code < self.max_dict_size:
-                    dictionary[pc] = next_code
-                    next_code += 1
-                    
-                prefix = byte
-            
-            if prefix:
-                out.write(dictionary[prefix].to_bytes(2, self.BYTE_ORDER))
+        with open(input_path, 'rb') as input_file, open(output_path, 'wb') as output_file:
+            codes = self._bytes_to_codes(self._read_bytes(input_file))
+
+            for code in codes:
+                output_file.write(code.to_bytes(self.CODE_SIZE, self.BYTE_ORDER))
             
             
     def decode(self, input_path, output_path=None):
@@ -98,39 +69,82 @@ class LZWArchiver():
             original_name = input_path.stem 
             output_path = input_path.parent / f"decoded_{original_name}"
         
+        with open(input_path, 'rb') as input_file, open(output_path, 'wb') as output_file:
+            bytes = self._codes_to_bytes(self._read_codes(input_file))
+
+            for byte in bytes:
+                output_file.write(byte)
+                
+                
+    def _init_dict(self, mode: DictMode):
+        if mode == DictMode.ENCODE:
+            return {bytes([i]): i for i in range(256)}
+        elif mode == DictMode.DECODE:
+            return {i: bytes([i]) for i in range(256)}
+        else:
+            raise ValueError("Invalid mode")
+                
+            
+    def _read_bytes(self, input_file):
+        while(byte := input_file.read(1)):
+            yield byte
+    
+    
+    def _bytes_to_codes(self, bytes_iter):
+        dictionary = self._init_dict(DictMode.ENCODE)
+        next_code = 256
+        prefix = b''
+        
+        for byte in bytes_iter:    
+            pc = prefix + byte
+            if pc in dictionary:
+                prefix = pc
+                continue
+                
+            yield dictionary[prefix]
+            
+            if next_code < self.max_dict_size:
+                dictionary[pc] = next_code
+                next_code += 1
+                
+            prefix = byte
+        
+        if prefix:
+            yield dictionary[prefix]
+            
+            
+    def _read_codes(self, input_file):
+        while(code := input_file.read(self.CODE_SIZE)):
+            yield int.from_bytes(code, self.BYTE_ORDER)
+            
+    
+    def _codes_to_bytes(self, codes_iter):
+        codes_iter = iter(codes_iter)
+        try:
+            first_code = next(codes_iter)
+        except StopIteration:
+            return 
+        
         dictionary = self._init_dict(DictMode.DECODE)
         next_code = 256
+        sequence = dictionary[first_code]
+        yield sequence
         
-        with open(input_path, 'rb') as f, open(output_path, 'wb') as out:
+        for code in codes_iter:
+            if code in dictionary:
+                entry = dictionary[code]
+            elif code == next_code:  
+                # Rare case when encoder havnt added sequence yet
+                # For examole 'aaaaa' encoded output should be ['97', '256', '256']     
+                # This only happens if the sequence starts and ends with the same symbol       
+                entry = sequence + sequence[:1]
+            else:
+                raise ValueError(f"Bad compressed code: {code}")
             
-            data = f.read(2)
-            if not data:
-                return
+            yield entry
             
-            code = int.from_bytes(data, self.BYTE_ORDER)
-            sequence = dictionary[code]
-            out.write(sequence)
+            if next_code < self.max_dict_size:
+                dictionary[next_code] = sequence + entry[:1]
+                next_code += 1
             
-            while True:
-                data = f.read(2)
-                if not data: 
-                    break
-                code = int.from_bytes(data, self.BYTE_ORDER)
-                                
-                if code in dictionary:
-                    entry = dictionary[code]
-                elif code == next_code:  
-                    # Rare case when encoder havnt added sequence yet
-                    # For examole 'aaaaa' encoded output should be ['97', '256', '256']     
-                    # This only happens if the sequence starts and ends with the same symbol       
-                    entry = sequence + sequence[:1]
-                else:
-                    raise ValueError(f"Bad compressed code: {code}")
-                
-                out.write(entry)
-                
-                if next_code < self.max_dict_size:
-                    dictionary[next_code] = sequence + entry[:1]
-                    next_code += 1
-                
-                sequence = entry
+            sequence = entry   
