@@ -5,6 +5,7 @@ A class that implements archiving and unarchiving
 
 from enum import Enum
 from pathlib import Path
+from typing import BinaryIO, Iterator
 from .constants import (
     DICT_SIZE_LIMIT, 
     DEFAULT_MAX_DICT, 
@@ -27,16 +28,8 @@ class LZWArchiver():
         self.max_dict_size = min(max_dict_size, DICT_SIZE_LIMIT)
             
     
-    def encode(self, input_path, output_path=None):
-        """_summary_
-            Encodes file using LZW algorithm
-        Args:
-            input_file (str): Input file path
-            output_file (str, optional): Output file path. If not specified creates new <input_file>.lzw file
-
-        Raises:
-            FileNotFoundError: If input file doesn't exist throws
-        """
+    def encode(self, input_path : str | Path, output_path: str | Path = None) -> None:
+        """Encodes file using LZW algorithm"""
         
         input_path = Path(input_path)
         
@@ -54,16 +47,8 @@ class LZWArchiver():
                 output_file.write(code.to_bytes(CODE_SIZE, BYTE_ORDER))
             
             
-    def decode(self, input_path, output_path=None):
-        """_summary_
-            Decodes file encoded by LZW algorithm
-        Args:
-            input_file (str): .lzw file path to decode
-            output_file (str, optional): Output file path. If not specified creates new <input_file> file
-
-        Raises:
-            FileNotFoundError: If input file doesn't exist throws this exception
-        """
+    def decode(self, input_path : str | Path, output_path: str | Path = None) -> None:
+        """Decodes file encoded by LZW algorithm"""
         input_path = Path(input_path)
         
         if not input_path.exists():
@@ -83,7 +68,7 @@ class LZWArchiver():
                 output_file.write(byte)
                 
     @staticmethod            
-    def _init_dict(mode: DictMode):
+    def _init_dict(mode : DictMode) -> dict[bytes, int] | dict[int, bytes]:
         """Initializes dictionary for encoding and decoding based on mode"""
         if mode == DictMode.ENCODE:
             return {bytes([i]): i for i in range(256)}
@@ -93,13 +78,13 @@ class LZWArchiver():
             raise ValueError("Invalid mode")
                 
     @staticmethod
-    def _read_bytes(input_file):
+    def _read_bytes(input_file : BinaryIO) -> Iterator[bytes]:
         """Reads bytes from the file one by one"""
         while(byte := input_file.read(1)):
             yield byte
     
     
-    def _bytes_to_codes(self, bytes_iter):
+    def _bytes_to_codes(self, bytes_iter : Iterator[bytes]) -> Iterator[int]:
         """Transforms bytes sequence into codes sequence"""
         dictionary = self._init_dict(DictMode.ENCODE)
         next_code = 256
@@ -123,13 +108,13 @@ class LZWArchiver():
             yield dictionary[prefix]
             
     @staticmethod    
-    def _read_codes(input_file):
+    def _read_codes(input_file : BinaryIO) -> Iterator[int]:
         """Reads codes from the file (each code takes CODE_SIZE in te file)"""
         while(code := input_file.read(CODE_SIZE)):
             yield int.from_bytes(code, BYTE_ORDER)
             
     
-    def _codes_to_bytes(self, codes_iter):
+    def _codes_to_bytes(self, codes_iter : Iterator[int]) -> Iterator[bytes]:
         """Transforms codes sequence into bytes sequence"""
         codes_iter = iter(codes_iter)
         try:
