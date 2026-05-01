@@ -158,17 +158,15 @@ class TestBytesToCodes():
 
         assert list(codes_iter) == []
 
-    @pytest.mark.parametrize("bytes_iter, expected",
-                             [
-                                 (b"a", [97]),
-                                 (b"abc", [97, 98, 99]),
-                                 (b"abab", [97, 98, 256]),
-                                 (b"AAAAA", [65, 256, 256]),
-                                 (b"PIKAPIKA", [80, 73, 75, 65, 256, 258]),
-                                 (b"PIKACHUPINCHES", [
-                                  80, 73, 75, 65, 67, 72, 85, 256, 78, 260, 69, 83])
-                             ],
-                             indirect=["bytes_iter"])
+    @pytest.mark.parametrize("bytes_iter, expected", [
+        (b"a", [97]),
+        (b"abc", [97, 98, 99]),
+        (b"abab", [97, 98, 256]),
+        (b"AAAAA", [65, 256, 256]),
+        (b"PIKAPIKA", [80, 73, 75, 65, 256, 258]),
+        (b"PIKACHUPINCHES", [
+            80, 73, 75, 65, 67, 72, 85, 256, 78, 260, 69, 83])
+    ], indirect=["bytes_iter"])
     def test_bytes_to_codes(self, archiver, bytes_iter, expected):
         codes_iter = archiver._bytes_to_codes(bytes_iter)
         assert list(codes_iter) == expected
