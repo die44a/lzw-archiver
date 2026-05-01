@@ -5,19 +5,22 @@ A class that implements archiving and unarchiving
 
 from enum import Enum
 from pathlib import Path
+from .constants import (
+    DICT_SIZE_LIMIT, 
+    DEFAULT_MAX_DICT, 
+    BYTE_ORDER, 
+    CODE_SIZE
+)
+
+__all__ = ['LZWArchiver']
 
 class DictMode(Enum):
     ENCODE = 1
     DECODE = 2
 
 class LZWArchiver():
-    DICT_SIZE_LIMIT = 65535
-    DEFAULT_MAX_DICT = 4096
-    BYTE_ORDER = 'big'
-    CODE_SIZE = 2
-
     def __init__(self, max_dict_size=DEFAULT_MAX_DICT):
-        self.max_dict_size = min(max_dict_size, self.DICT_SIZE_LIMIT)
+        self.max_dict_size = min(max_dict_size, DICT_SIZE_LIMIT)
             
     
     def encode(self, input_path, output_path=None):
@@ -44,7 +47,7 @@ class LZWArchiver():
             codes = self._bytes_to_codes(self._read_bytes(input_file))
 
             for code in codes:
-                output_file.write(code.to_bytes(self.CODE_SIZE, self.BYTE_ORDER))
+                output_file.write(code.to_bytes(CODE_SIZE, BYTE_ORDER))
             
             
     def decode(self, input_path, output_path=None):
@@ -114,8 +117,8 @@ class LZWArchiver():
             
             
     def _read_codes(self, input_file):
-        while(code := input_file.read(self.CODE_SIZE)):
-            yield int.from_bytes(code, self.BYTE_ORDER)
+        while(code := input_file.read(CODE_SIZE)):
+            yield int.from_bytes(code, BYTE_ORDER)
             
     
     def _codes_to_bytes(self, codes_iter):
