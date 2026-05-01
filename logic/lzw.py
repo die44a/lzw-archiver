@@ -15,6 +15,10 @@ from .constants import (
 __all__ = ['LZWArchiver']
 
 class DictMode(Enum):
+    """
+    Dictionary creating modes:
+    ENCODE and DECODE for endcoding and decoding files respectively
+    """
     ENCODE = 1
     DECODE = 2
 
