@@ -3,7 +3,12 @@ A class that implements archiving and unarchiving
     using the LZW algorithm
 """
 
+from enum import Enum
 from pathlib import Path
+
+class DictMode(Enum):
+    ENCODE = 1
+    DECODE = 2
 
 class LZWArchiver():
     DICT_SIZE_LIMIT = 65535
@@ -14,12 +19,13 @@ class LZWArchiver():
         self.max_dict_size = min(max_dict_size, self.DICT_SIZE_LIMIT)
         
         
-    def _init_encode_dict(self):
-        return {bytes([i]): i for i in range(256)}
-    
-    
-    def _init_decode_dict(self):
-        return {i: bytes([i]) for i in range(256)}
+    def _init_dict(self, mode: DictMode):
+        if mode == DictMode.ENCODE:
+            return {bytes([i]): i for i in range(256)}
+        elif mode == DictMode.DECODE:
+            return {i: bytes([i]) for i in range(256)}
+        else:
+            raise ValueError("Invalid mode")
     
     
     def encode(self, input_path, output_path=None):
@@ -39,7 +45,7 @@ class LZWArchiver():
             raise FileNotFoundError(f"Input file doesn't exist: {input_path}")
         
         output_path = Path(output_path or input_path.with_suffix(input_path.suffix + ".lzw"))
-        dictionary = self._init_encode_dict()
+        dictionary = self._init_dict(DictMode.ENCODE)
         next_code = 256
         
         #header = b'LZW' + self.max_dict_size.to_bytes(2, self.BYTE_ORDER)  # TODO: write down file header
@@ -92,7 +98,7 @@ class LZWArchiver():
             original_name = input_path.stem 
             output_path = input_path.parent / f"decoded_{original_name}"
         
-        dictionary = self._init_decode_dict()
+        dictionary = self._init_dict(DictMode.DECODE)
         next_code = 256
         
         with open(input_path, 'rb') as f, open(output_path, 'wb') as out:
