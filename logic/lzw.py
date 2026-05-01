@@ -78,8 +78,8 @@ class LZWArchiver():
             for byte in bytes:
                 output_file.write(byte)
                 
-                
-    def _init_dict(self, mode: DictMode):
+    @staticmethod            
+    def _init_dict(mode: DictMode):
         if mode == DictMode.ENCODE:
             return {bytes([i]): i for i in range(256)}
         elif mode == DictMode.DECODE:
@@ -87,8 +87,8 @@ class LZWArchiver():
         else:
             raise ValueError("Invalid mode")
                 
-            
-    def _read_bytes(self, input_file):
+    @staticmethod
+    def _read_bytes(input_file):
         while(byte := input_file.read(1)):
             yield byte
     
@@ -115,8 +115,8 @@ class LZWArchiver():
         if prefix:
             yield dictionary[prefix]
             
-            
-    def _read_codes(self, input_file):
+    @staticmethod    
+    def _read_codes(input_file):
         while(code := input_file.read(CODE_SIZE)):
             yield int.from_bytes(code, BYTE_ORDER)
             
