@@ -1,7 +1,5 @@
-from pathlib import Path
 from logic.lzw import LZWArchiver, DictMode
 from logic.constants import BYTE_ORDER, CODE_SIZE
-import os
 import pytest
 
 
@@ -141,3 +139,76 @@ class TestReadCodes():
                 count += 1
 
         assert count == 5000
+
+
+class TestBytesToCodes():
+
+    @pytest.fixture
+    def archiver(self):
+        return LZWArchiver()
+
+    @pytest.fixture
+    def bytes_iter(self, request):
+        data = getattr(request, "param", b"")
+        return (data[i:i+1] for i in range(len(data)))
+
+    @pytest.mark.parametrize("bytes_iter", [b""], indirect=True)
+    def test_if_empty(self, archiver, bytes_iter):
+        codes_iter = archiver._bytes_to_codes(bytes_iter)
+
+        assert list(codes_iter) == []
+
+    @pytest.mark.parametrize("bytes_iter, expected",
+                             [
+                                 (b"a", [97]),
+                                 (b"abc", [97, 98, 99]),
+                                 (b"abab", [97, 98, 256]),
+                                 (b"AAAAA", [65, 256, 256]),
+                                 (b"PIKAPIKA", [80, 73, 75, 65, 256, 258]),
+                                 (b"PIKACHUPINCHES", [
+                                  80, 73, 75, 65, 67, 72, 85, 256, 78, 260, 69, 83])
+                             ],
+                             indirect=["bytes_iter"])
+    def test_bytes_to_codes(self, archiver, bytes_iter, expected):
+        codes_iter = archiver._bytes_to_codes(bytes_iter)
+        assert list(codes_iter) == expected
+
+    def test_dict_overflow(self):
+        a = LZWArchiver(256)
+
+        data = b"ababababab"
+        bytes_iter = (data[i:i+1] for i in range(len(data)))
+
+        result = list(a._bytes_to_codes(bytes_iter))
+        assert result == [97, 98, 97, 98, 97, 98, 97, 98, 97, 98]
+
+
+class TestCodesToBytes:
+
+    @pytest.fixture
+    def archiver(self):
+        return LZWArchiver()
+
+    @pytest.mark.parametrize("codes, expected", [
+        ([], b""),
+        ([97], b"a"),
+        ([97, 98, 99], b"abc"),
+        ([97, 98, 256], b"abab"),
+        ([97, 256, 257], b"aaaaaa"),
+    ])
+    def test_codes_to_bytes(self, archiver, codes, expected):
+        result = b"".join(archiver._codes_to_bytes(codes))
+        assert result == expected
+
+    def test_codes_to_bytes_invalid_code(self, archiver):
+        with pytest.raises(ValueError, match="Bad compressed code"):
+            list(archiver._codes_to_bytes([97, 300]))
+
+    def test_decode_dict_overflow(self, archiver):
+        archiver.max_dict_size = 257
+
+        codes = [97, 98, 256, 256]
+
+        result = b"".join(archiver._codes_to_bytes(codes))
+
+        assert result == b"ababab"
