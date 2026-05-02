@@ -38,3 +38,41 @@ class TestEncodingDecodingDifferentFormats():
 
         assert decoded_path.exists()
         assert filecmp.cmp(input_file, decoded_path, shallow=False)
+
+
+class TestEdgeCases():
+
+    @pytest.fixture
+    def archiver(self):
+        """Creates archiver object for each test"""
+        return LZWArchiver()
+
+    def test_input_file_not_exists(self, archiver, tmp_path):
+        input_path = tmp_path / "test_input_file_not_exists"
+        with pytest.raises(FileNotFoundError):
+            archiver.encode(input_path)
+
+        with pytest.raises(FileNotFoundError):
+            archiver.decode(input_path)
+
+    def test_file_with_multiple_dots(self, archiver, tmp_path):
+        input_path = tmp_path / "my.test.data.txt"
+        input_path.write_text("some content")
+
+        encoded = input_path.with_suffix(input_path.suffix + ".lzw")
+        archiver.encode(input_path, encoded)
+
+        assert encoded.name == "my.test.data.txt.lzw"
+
+    def test_random_binary_data(self, archiver, tmp_path):
+        input_path = tmp_path / "random.bin"
+        input_path.write_bytes(bytes(random.getrandbits(8)
+                                     for _ in range(100000)))
+
+        encoded = input_path.with_suffix(".lzw")
+        decoded = tmp_path / "decoded_random.bin"
+
+        archiver.encode(input_path, encoded)
+        archiver.decode(encoded, decoded)
+
+        assert input_path.read_bytes() == decoded.read_bytes()
