@@ -28,7 +28,14 @@ class LZWArchiver():
 
     def encode(self, input_path: str | Path,
                output_path: str | Path = None) -> None:
-        """Encodes file using LZW algorithm"""
+        """Encodes input file content using LZW algorithm
+        Args:
+            input_path (str | Path): Path to the file to encode
+            output_path (str | Path, optional): Path to the file for output encoded data. If None or not exists generates new file itself
+
+        Raises:
+            FileNotFoundError: If input file was not found
+        """
         input_path = Path(input_path)
 
         if not input_path.exists():
@@ -48,7 +55,16 @@ class LZWArchiver():
 
     def decode(self, input_path: str | Path,
                output_path: str | Path = None) -> None:
-        """Decodes file encoded by LZW algorithm"""
+        """Decodes input file content using LZW algorithm
+
+        Args:
+            input_path (str | Path): Path to the file to decode
+            output_path (str | Path, optional): Path to the file for output decoded data. If None or not exists generates new file itself
+
+        Raises:
+            FileNotFoundError: If input file was not found
+            ValueError: if input file has no .lzw extention
+        """
         input_path = Path(input_path)
 
         if not input_path.exists():
