@@ -1,0 +1,6354 @@
+[
+  {
+    "user_id": "u-100000",
+    "is_active": true,
+    "registration_date": "2023-02-27T21:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "user0@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "131912"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1000-0",
+        "total": 25155.79,
+        "status": "shipped",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1374
+    }
+  },
+  {
+    "user_id": "u-100001",
+    "is_active": true,
+    "registration_date": "2023-10-16T09:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Сидоров",
+      "email": "user1@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "170421"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1001-0",
+        "total": 22299.16,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3943
+    }
+  },
+  {
+    "user_id": "u-100002",
+    "is_active": false,
+    "registration_date": "2023-12-04T11:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user2@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "178386"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1002-0",
+        "total": 12641.28,
+        "status": "shipped",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1002-1",
+        "total": 44274.69,
+        "status": "shipped",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1002-2",
+        "total": 5809.44,
+        "status": "processing",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4075
+    }
+  },
+  {
+    "user_id": "u-100003",
+    "is_active": true,
+    "registration_date": "2023-11-19T02:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Попов",
+      "email": "user3@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "135891"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1003-0",
+        "total": 48866.04,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1003-1",
+        "total": 39168.3,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1003-2",
+        "total": 19586.8,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3227
+    }
+  },
+  {
+    "user_id": "u-100004",
+    "is_active": true,
+    "registration_date": "2023-09-19T09:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Смирнов",
+      "email": "user4@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "114122"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1004-0",
+        "total": 33098.66,
+        "status": "shipped",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1004-1",
+        "total": 997.67,
+        "status": "cancelled",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1004-2",
+        "total": 16031.33,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4171
+    }
+  },
+  {
+    "user_id": "u-100005",
+    "is_active": true,
+    "registration_date": "2023-08-21T03:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Петров",
+      "email": "user5@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "160442"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1005-0",
+        "total": 16408.91,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1005-1",
+        "total": 47828.98,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3763
+    }
+  },
+  {
+    "user_id": "u-100006",
+    "is_active": true,
+    "registration_date": "2023-04-18T05:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Кузнецов",
+      "email": "user6@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "138848"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1006-0",
+        "total": 34004.16,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2099
+    }
+  },
+  {
+    "user_id": "u-100007",
+    "is_active": false,
+    "registration_date": "2023-10-01T10:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Петров",
+      "email": "user7@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "139651"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1007-0",
+        "total": 21300.06,
+        "status": "delivered",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 568
+    }
+  },
+  {
+    "user_id": "u-100008",
+    "is_active": true,
+    "registration_date": "2023-04-07T02:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user8@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "161200"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1008-0",
+        "total": 36434.36,
+        "status": "processing",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1008-1",
+        "total": 13344.1,
+        "status": "delivered",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1972
+    }
+  },
+  {
+    "user_id": "u-100009",
+    "is_active": true,
+    "registration_date": "2023-05-09T12:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user9@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "139344"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1009-0",
+        "total": 43886.81,
+        "status": "delivered",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1009-1",
+        "total": 37584.4,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1009-2",
+        "total": 18737.41,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 213
+    }
+  },
+  {
+    "user_id": "u-100010",
+    "is_active": true,
+    "registration_date": "2023-05-12T07:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user10@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "153937"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1010-0",
+        "total": 49508.37,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1010-1",
+        "total": 26799.52,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 647
+    }
+  },
+  {
+    "user_id": "u-100011",
+    "is_active": false,
+    "registration_date": "2023-11-19T05:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Иванов",
+      "email": "user11@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "196061"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1011-0",
+        "total": 39072.14,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1011-1",
+        "total": 22334.7,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1429
+    }
+  },
+  {
+    "user_id": "u-100012",
+    "is_active": false,
+    "registration_date": "2023-03-06T13:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user12@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "114634"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1012-0",
+        "total": 47954.15,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1012-1",
+        "total": 37158.04,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1012-2",
+        "total": 45977.08,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2709
+    }
+  },
+  {
+    "user_id": "u-100013",
+    "is_active": true,
+    "registration_date": "2023-09-19T15:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Иванов",
+      "email": "user13@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "116717"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1013-0",
+        "total": 29639.56,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4938
+    }
+  },
+  {
+    "user_id": "u-100014",
+    "is_active": true,
+    "registration_date": "2023-08-17T05:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Кузнецов",
+      "email": "user14@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "173257"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1014-0",
+        "total": 25450.24,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1014-1",
+        "total": 41682.74,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4092
+    }
+  },
+  {
+    "user_id": "u-100015",
+    "is_active": true,
+    "registration_date": "2023-09-16T08:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Петров",
+      "email": "user15@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "159223"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1015-0",
+        "total": 32599.15,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1015-1",
+        "total": 39118.22,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2735
+    }
+  },
+  {
+    "user_id": "u-100016",
+    "is_active": false,
+    "registration_date": "2023-05-21T15:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user16@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "179227"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1016-0",
+        "total": 26512.6,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1016-1",
+        "total": 35258.64,
+        "status": "shipped",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4045
+    }
+  },
+  {
+    "user_id": "u-100017",
+    "is_active": true,
+    "registration_date": "2023-11-17T03:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user17@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "116406"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1017-0",
+        "total": 11892.15,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1017-1",
+        "total": 29524.37,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1017-2",
+        "total": 9270.76,
+        "status": "processing",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3903
+    }
+  },
+  {
+    "user_id": "u-100018",
+    "is_active": false,
+    "registration_date": "2023-07-11T14:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "user18@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "147940"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1018-0",
+        "total": 34638.75,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4936
+    }
+  },
+  {
+    "user_id": "u-100019",
+    "is_active": true,
+    "registration_date": "2023-10-15T14:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user19@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "148994"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1019-0",
+        "total": 20806.07,
+        "status": "processing",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2783
+    }
+  },
+  {
+    "user_id": "u-100020",
+    "is_active": false,
+    "registration_date": "2023-03-01T22:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Кузнецов",
+      "email": "user20@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "151607"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1020-0",
+        "total": 43225.58,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4039
+    }
+  },
+  {
+    "user_id": "u-100021",
+    "is_active": true,
+    "registration_date": "2023-11-07T22:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user21@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "195836"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1021-0",
+        "total": 9315.03,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4497
+    }
+  },
+  {
+    "user_id": "u-100022",
+    "is_active": true,
+    "registration_date": "2023-10-06T22:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user22@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "144413"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1022-0",
+        "total": 8163.42,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 409
+    }
+  },
+  {
+    "user_id": "u-100023",
+    "is_active": true,
+    "registration_date": "2023-05-03T12:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Смирнов",
+      "email": "user23@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "102761"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1023-0",
+        "total": 2562.72,
+        "status": "cancelled",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1023-1",
+        "total": 18659.48,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4857
+    }
+  },
+  {
+    "user_id": "u-100024",
+    "is_active": false,
+    "registration_date": "2023-09-15T17:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Петров",
+      "email": "user24@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "179718"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1024-0",
+        "total": 17974.52,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1024-1",
+        "total": 14166.09,
+        "status": "shipped",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1024-2",
+        "total": 17868.71,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2006
+    }
+  },
+  {
+    "user_id": "u-100025",
+    "is_active": true,
+    "registration_date": "2023-01-20T06:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Смирнов",
+      "email": "user25@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "191707"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1025-0",
+        "total": 47676.81,
+        "status": "cancelled",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1025-1",
+        "total": 13590.56,
+        "status": "processing",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 950
+    }
+  },
+  {
+    "user_id": "u-100026",
+    "is_active": true,
+    "registration_date": "2023-12-28T18:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Иванов",
+      "email": "user26@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "192788"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1026-0",
+        "total": 48565.98,
+        "status": "processing",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 3324
+    }
+  },
+  {
+    "user_id": "u-100027",
+    "is_active": true,
+    "registration_date": "2023-04-16T05:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user27@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "131629"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1027-0",
+        "total": 4503.68,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1027-1",
+        "total": 1674.1,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3742
+    }
+  },
+  {
+    "user_id": "u-100028",
+    "is_active": true,
+    "registration_date": "2023-11-25T18:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user28@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "176916"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1028-0",
+        "total": 26760.07,
+        "status": "delivered",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4880
+    }
+  },
+  {
+    "user_id": "u-100029",
+    "is_active": false,
+    "registration_date": "2023-10-28T19:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Смирнов",
+      "email": "user29@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "181104"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1029-0",
+        "total": 7292.17,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1029-1",
+        "total": 23543.98,
+        "status": "delivered",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1029-2",
+        "total": 6781.3,
+        "status": "processing",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3536
+    }
+  },
+  {
+    "user_id": "u-100030",
+    "is_active": false,
+    "registration_date": "2023-05-05T05:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user30@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "115012"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1030-0",
+        "total": 44045.6,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4006
+    }
+  },
+  {
+    "user_id": "u-100031",
+    "is_active": true,
+    "registration_date": "2023-06-20T08:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Сидоров",
+      "email": "user31@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "164134"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1031-0",
+        "total": 42376.57,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1031-1",
+        "total": 11773.04,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1031-2",
+        "total": 42952.57,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1217
+    }
+  },
+  {
+    "user_id": "u-100032",
+    "is_active": false,
+    "registration_date": "2023-07-16T10:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Кузнецов",
+      "email": "user32@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "160989"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1032-0",
+        "total": 48840.84,
+        "status": "processing",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1032-1",
+        "total": 23366.83,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1032-2",
+        "total": 36434.87,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1522
+    }
+  },
+  {
+    "user_id": "u-100033",
+    "is_active": false,
+    "registration_date": "2023-08-24T13:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Сидоров",
+      "email": "user33@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "144680"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1033-0",
+        "total": 13879.28,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1033-1",
+        "total": 32891.98,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1033-2",
+        "total": 46130.85,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 6
+    }
+  },
+  {
+    "user_id": "u-100034",
+    "is_active": true,
+    "registration_date": "2023-01-13T11:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user34@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "195643"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1034-0",
+        "total": 31873.54,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4652
+    }
+  },
+  {
+    "user_id": "u-100035",
+    "is_active": true,
+    "registration_date": "2023-11-15T23:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Петров",
+      "email": "user35@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "150780"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1035-0",
+        "total": 29326.04,
+        "status": "shipped",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1035-1",
+        "total": 24135.81,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 583
+    }
+  },
+  {
+    "user_id": "u-100036",
+    "is_active": true,
+    "registration_date": "2023-02-18T16:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Смирнов",
+      "email": "user36@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "163033"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1036-0",
+        "total": 22105.03,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1036-1",
+        "total": 47067.61,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1036-2",
+        "total": 48962.68,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3933
+    }
+  },
+  {
+    "user_id": "u-100037",
+    "is_active": false,
+    "registration_date": "2023-03-14T15:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user37@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "183950"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1037-0",
+        "total": 17314.3,
+        "status": "processing",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1037-1",
+        "total": 49524.35,
+        "status": "delivered",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1037-2",
+        "total": 20871.33,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4954
+    }
+  },
+  {
+    "user_id": "u-100038",
+    "is_active": true,
+    "registration_date": "2023-08-20T06:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Кузнецов",
+      "email": "user38@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "186742"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1038-0",
+        "total": 28479.93,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2594
+    }
+  },
+  {
+    "user_id": "u-100039",
+    "is_active": true,
+    "registration_date": "2023-03-24T18:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Попов",
+      "email": "user39@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "148129"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1039-0",
+        "total": 20492.15,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1039-1",
+        "total": 27945.32,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4848
+    }
+  },
+  {
+    "user_id": "u-100040",
+    "is_active": true,
+    "registration_date": "2023-09-16T05:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Кузнецов",
+      "email": "user40@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "168262"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1040-0",
+        "total": 42251.47,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4433
+    }
+  },
+  {
+    "user_id": "u-100041",
+    "is_active": true,
+    "registration_date": "2023-03-15T20:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user41@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "107415"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1041-0",
+        "total": 23742.2,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1041-1",
+        "total": 19597.62,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 22
+    }
+  },
+  {
+    "user_id": "u-100042",
+    "is_active": true,
+    "registration_date": "2023-09-03T01:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user42@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "190651"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1042-0",
+        "total": 19580.76,
+        "status": "delivered",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1042-1",
+        "total": 41992.17,
+        "status": "delivered",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1042-2",
+        "total": 11490.71,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4249
+    }
+  },
+  {
+    "user_id": "u-100043",
+    "is_active": true,
+    "registration_date": "2023-08-18T06:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Кузнецов",
+      "email": "user43@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "196327"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1043-0",
+        "total": 28643.8,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1043-1",
+        "total": 38548.19,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3796
+    }
+  },
+  {
+    "user_id": "u-100044",
+    "is_active": true,
+    "registration_date": "2023-05-26T17:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user44@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "183598"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1044-0",
+        "total": 34406.93,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1044-1",
+        "total": 4279.98,
+        "status": "processing",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1044-2",
+        "total": 49169.89,
+        "status": "processing",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1560
+    }
+  },
+  {
+    "user_id": "u-100045",
+    "is_active": false,
+    "registration_date": "2023-12-06T19:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Петров",
+      "email": "user45@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "176521"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1045-0",
+        "total": 40227.54,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1449
+    }
+  },
+  {
+    "user_id": "u-100046",
+    "is_active": true,
+    "registration_date": "2023-03-05T09:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Петров",
+      "email": "user46@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "134852"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1046-0",
+        "total": 46178.93,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1046-1",
+        "total": 35012.34,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1046-2",
+        "total": 47614.8,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3716
+    }
+  },
+  {
+    "user_id": "u-100047",
+    "is_active": false,
+    "registration_date": "2023-07-02T14:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user47@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "129121"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1047-0",
+        "total": 48080.9,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 210
+    }
+  },
+  {
+    "user_id": "u-100048",
+    "is_active": true,
+    "registration_date": "2023-01-10T01:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Иванов",
+      "email": "user48@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "196133"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1048-0",
+        "total": 28460.42,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 4163
+    }
+  },
+  {
+    "user_id": "u-100049",
+    "is_active": false,
+    "registration_date": "2023-09-02T02:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user49@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "154835"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1049-0",
+        "total": 36077.14,
+        "status": "processing",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1049-1",
+        "total": 4682.66,
+        "status": "processing",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 379
+    }
+  },
+  {
+    "user_id": "u-100050",
+    "is_active": true,
+    "registration_date": "2023-09-10T15:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user50@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "192317"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1050-0",
+        "total": 9146.45,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1050-1",
+        "total": 23197.79,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1050-2",
+        "total": 16967.56,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2236
+    }
+  },
+  {
+    "user_id": "u-100051",
+    "is_active": true,
+    "registration_date": "2023-09-17T13:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user51@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "175429"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1051-0",
+        "total": 2450.47,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1051-1",
+        "total": 31404.92,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1051-2",
+        "total": 39961.48,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2664
+    }
+  },
+  {
+    "user_id": "u-100052",
+    "is_active": false,
+    "registration_date": "2023-05-16T09:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Иванов",
+      "email": "user52@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "160623"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1052-0",
+        "total": 47963.67,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1052-1",
+        "total": 45054.73,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1052-2",
+        "total": 37232.73,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3253
+    }
+  },
+  {
+    "user_id": "u-100053",
+    "is_active": true,
+    "registration_date": "2023-08-19T12:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Сидоров",
+      "email": "user53@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "188449"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1053-0",
+        "total": 27050.19,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1053-1",
+        "total": 21332.72,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3814
+    }
+  },
+  {
+    "user_id": "u-100054",
+    "is_active": true,
+    "registration_date": "2023-09-10T10:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Иванов",
+      "email": "user54@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "184605"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1054-0",
+        "total": 28256.58,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1054-1",
+        "total": 47051.8,
+        "status": "shipped",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1054-2",
+        "total": 48877.46,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2716
+    }
+  },
+  {
+    "user_id": "u-100055",
+    "is_active": true,
+    "registration_date": "2023-06-20T02:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user55@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "107879"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1055-0",
+        "total": 17893.34,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1055-1",
+        "total": 16370.34,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1055-2",
+        "total": 10933.57,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 733
+    }
+  },
+  {
+    "user_id": "u-100056",
+    "is_active": true,
+    "registration_date": "2023-05-16T10:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user56@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "191653"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1056-0",
+        "total": 47889.63,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1056-1",
+        "total": 48821.96,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3831
+    }
+  },
+  {
+    "user_id": "u-100057",
+    "is_active": true,
+    "registration_date": "2023-12-28T14:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Кузнецов",
+      "email": "user57@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "196805"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1057-0",
+        "total": 36330.04,
+        "status": "delivered",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1057-1",
+        "total": 14773.52,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1057-2",
+        "total": 6677.06,
+        "status": "shipped",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1884
+    }
+  },
+  {
+    "user_id": "u-100058",
+    "is_active": false,
+    "registration_date": "2023-08-03T14:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Попов",
+      "email": "user58@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "132771"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1058-0",
+        "total": 32220.8,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1058-1",
+        "total": 40981.85,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 3890
+    }
+  },
+  {
+    "user_id": "u-100059",
+    "is_active": true,
+    "registration_date": "2023-05-26T03:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Попов",
+      "email": "user59@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "133979"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1059-0",
+        "total": 46427.57,
+        "status": "cancelled",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1059-1",
+        "total": 18588.72,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3069
+    }
+  },
+  {
+    "user_id": "u-100060",
+    "is_active": true,
+    "registration_date": "2023-12-13T00:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Кузнецов",
+      "email": "user60@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "131266"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1060-0",
+        "total": 48665.81,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1060-1",
+        "total": 4120.61,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1245
+    }
+  },
+  {
+    "user_id": "u-100061",
+    "is_active": true,
+    "registration_date": "2023-03-22T14:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Кузнецов",
+      "email": "user61@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "141154"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1061-0",
+        "total": 13652.29,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1061-1",
+        "total": 17070.26,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4239
+    }
+  },
+  {
+    "user_id": "u-100062",
+    "is_active": true,
+    "registration_date": "2023-07-27T04:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Сидоров",
+      "email": "user62@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "149559"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1062-0",
+        "total": 46916.62,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1062-1",
+        "total": 12668.73,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1062-2",
+        "total": 5594.94,
+        "status": "delivered",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4462
+    }
+  },
+  {
+    "user_id": "u-100063",
+    "is_active": true,
+    "registration_date": "2023-06-20T19:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user63@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "165761"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1063-0",
+        "total": 12819.17,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1583
+    }
+  },
+  {
+    "user_id": "u-100064",
+    "is_active": true,
+    "registration_date": "2023-03-04T00:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Петров",
+      "email": "user64@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "123339"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1064-0",
+        "total": 31078.71,
+        "status": "cancelled",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1064-1",
+        "total": 27294.93,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1978
+    }
+  },
+  {
+    "user_id": "u-100065",
+    "is_active": true,
+    "registration_date": "2023-03-28T03:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Смирнов",
+      "email": "user65@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "151531"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1065-0",
+        "total": 43984.78,
+        "status": "processing",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1065-1",
+        "total": 1873.92,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1021
+    }
+  },
+  {
+    "user_id": "u-100066",
+    "is_active": true,
+    "registration_date": "2023-03-14T12:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user66@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "155574"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1066-0",
+        "total": 27187.98,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1804
+    }
+  },
+  {
+    "user_id": "u-100067",
+    "is_active": false,
+    "registration_date": "2023-07-18T05:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Кузнецов",
+      "email": "user67@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "164029"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1067-0",
+        "total": 16295.73,
+        "status": "processing",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1067-1",
+        "total": 20139.7,
+        "status": "shipped",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1067-2",
+        "total": 12604.16,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 196
+    }
+  },
+  {
+    "user_id": "u-100068",
+    "is_active": true,
+    "registration_date": "2023-01-26T06:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user68@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "182648"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1068-0",
+        "total": 1808.78,
+        "status": "cancelled",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1068-1",
+        "total": 37364.7,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1068-2",
+        "total": 6236.71,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4692
+    }
+  },
+  {
+    "user_id": "u-100069",
+    "is_active": false,
+    "registration_date": "2023-06-19T09:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user69@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "126044"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1069-0",
+        "total": 40792.44,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3970
+    }
+  },
+  {
+    "user_id": "u-100070",
+    "is_active": true,
+    "registration_date": "2023-11-20T22:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Сидоров",
+      "email": "user70@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "124958"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1070-0",
+        "total": 26477.73,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1070-1",
+        "total": 36488.42,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 4558
+    }
+  },
+  {
+    "user_id": "u-100071",
+    "is_active": true,
+    "registration_date": "2023-09-24T04:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Смирнов",
+      "email": "user71@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "157058"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1071-0",
+        "total": 14238.12,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1071-1",
+        "total": 4299.87,
+        "status": "processing",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3967
+    }
+  },
+  {
+    "user_id": "u-100072",
+    "is_active": true,
+    "registration_date": "2023-01-18T21:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user72@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "129337"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1072-0",
+        "total": 42212.23,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1072-1",
+        "total": 15140.57,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1072-2",
+        "total": 29957.69,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 3708
+    }
+  },
+  {
+    "user_id": "u-100073",
+    "is_active": true,
+    "registration_date": "2023-10-22T04:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Петров",
+      "email": "user73@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "107013"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1073-0",
+        "total": 25913.36,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1073-1",
+        "total": 21005.46,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1073-2",
+        "total": 41608.4,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1839
+    }
+  },
+  {
+    "user_id": "u-100074",
+    "is_active": true,
+    "registration_date": "2023-09-19T05:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Кузнецов",
+      "email": "user74@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "164505"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1074-0",
+        "total": 14727.03,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1074-1",
+        "total": 47384.13,
+        "status": "shipped",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1074-2",
+        "total": 4525.39,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3905
+    }
+  },
+  {
+    "user_id": "u-100075",
+    "is_active": true,
+    "registration_date": "2023-04-27T10:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user75@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "150110"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1075-0",
+        "total": 9168.31,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1857
+    }
+  },
+  {
+    "user_id": "u-100076",
+    "is_active": true,
+    "registration_date": "2023-12-02T00:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user76@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "104008"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1076-0",
+        "total": 9907.87,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1076-1",
+        "total": 33921.67,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1076-2",
+        "total": 43313.02,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2681
+    }
+  },
+  {
+    "user_id": "u-100077",
+    "is_active": true,
+    "registration_date": "2023-09-08T03:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Петров",
+      "email": "user77@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "128935"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1077-0",
+        "total": 37489.47,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1077-1",
+        "total": 49811.73,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 4660
+    }
+  },
+  {
+    "user_id": "u-100078",
+    "is_active": false,
+    "registration_date": "2023-07-16T21:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user78@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "146644"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1078-0",
+        "total": 43498.36,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1704
+    }
+  },
+  {
+    "user_id": "u-100079",
+    "is_active": true,
+    "registration_date": "2023-08-18T11:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user79@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "184118"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1079-0",
+        "total": 18628.13,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2615
+    }
+  },
+  {
+    "user_id": "u-100080",
+    "is_active": true,
+    "registration_date": "2023-05-12T05:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user80@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "183891"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1080-0",
+        "total": 18553.32,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1080-1",
+        "total": 43834.38,
+        "status": "shipped",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 3624
+    }
+  },
+  {
+    "user_id": "u-100081",
+    "is_active": true,
+    "registration_date": "2023-05-21T11:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user81@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "107827"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1081-0",
+        "total": 23687.18,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2794
+    }
+  },
+  {
+    "user_id": "u-100082",
+    "is_active": false,
+    "registration_date": "2023-08-18T20:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Смирнов",
+      "email": "user82@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "182350"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1082-0",
+        "total": 49336.42,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4721
+    }
+  },
+  {
+    "user_id": "u-100083",
+    "is_active": true,
+    "registration_date": "2023-05-24T19:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Иванов",
+      "email": "user83@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "165577"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1083-0",
+        "total": 36902.56,
+        "status": "processing",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1083-1",
+        "total": 32962.64,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3169
+    }
+  },
+  {
+    "user_id": "u-100084",
+    "is_active": true,
+    "registration_date": "2023-07-16T06:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Петров",
+      "email": "user84@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "195551"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1084-0",
+        "total": 34500.07,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1084-1",
+        "total": 39287.71,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1084-2",
+        "total": 24743.57,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1520
+    }
+  },
+  {
+    "user_id": "u-100085",
+    "is_active": true,
+    "registration_date": "2023-03-28T23:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user85@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "136174"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1085-0",
+        "total": 43803.88,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1085-1",
+        "total": 27370.45,
+        "status": "shipped",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1085-2",
+        "total": 29281.12,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4692
+    }
+  },
+  {
+    "user_id": "u-100086",
+    "is_active": true,
+    "registration_date": "2023-12-06T11:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Петров",
+      "email": "user86@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "100409"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1086-0",
+        "total": 36510.24,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1086-1",
+        "total": 10252.79,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2558
+    }
+  },
+  {
+    "user_id": "u-100087",
+    "is_active": true,
+    "registration_date": "2023-08-15T07:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Петров",
+      "email": "user87@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "117995"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1087-0",
+        "total": 8372.43,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1087-1",
+        "total": 18227.35,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3585
+    }
+  },
+  {
+    "user_id": "u-100088",
+    "is_active": true,
+    "registration_date": "2023-01-23T03:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Сидоров",
+      "email": "user88@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "154400"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1088-0",
+        "total": 2762.87,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1088-1",
+        "total": 12874.95,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 995
+    }
+  },
+  {
+    "user_id": "u-100089",
+    "is_active": true,
+    "registration_date": "2023-03-03T10:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Петров",
+      "email": "user89@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "157685"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1089-0",
+        "total": 27687.74,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1089-1",
+        "total": 1631.2,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1089-2",
+        "total": 44390.17,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 104
+    }
+  },
+  {
+    "user_id": "u-100090",
+    "is_active": false,
+    "registration_date": "2023-12-25T18:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user90@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "155262"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1090-0",
+        "total": 8266.62,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1090-1",
+        "total": 45522.42,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1991
+    }
+  },
+  {
+    "user_id": "u-100091",
+    "is_active": true,
+    "registration_date": "2023-05-08T21:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user91@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "166977"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1091-0",
+        "total": 31728.1,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3582
+    }
+  },
+  {
+    "user_id": "u-100092",
+    "is_active": true,
+    "registration_date": "2023-12-04T14:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Петров",
+      "email": "user92@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "153283"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1092-0",
+        "total": 2088.57,
+        "status": "delivered",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1416
+    }
+  },
+  {
+    "user_id": "u-100093",
+    "is_active": true,
+    "registration_date": "2023-09-05T19:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Петров",
+      "email": "user93@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "123694"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1093-0",
+        "total": 9859.49,
+        "status": "processing",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1093-1",
+        "total": 37934.3,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1093-2",
+        "total": 31932.64,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 122
+    }
+  },
+  {
+    "user_id": "u-100094",
+    "is_active": true,
+    "registration_date": "2023-11-13T17:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user94@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "185383"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1094-0",
+        "total": 39395.92,
+        "status": "processing",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1094-1",
+        "total": 30713.44,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1094-2",
+        "total": 10225.69,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2966
+    }
+  },
+  {
+    "user_id": "u-100095",
+    "is_active": true,
+    "registration_date": "2023-07-18T20:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Попов",
+      "email": "user95@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "129972"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1095-0",
+        "total": 13174.76,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1095-1",
+        "total": 44619.72,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1095-2",
+        "total": 2636.18,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2471
+    }
+  },
+  {
+    "user_id": "u-100096",
+    "is_active": false,
+    "registration_date": "2023-04-09T03:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Смирнов",
+      "email": "user96@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "193557"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1096-0",
+        "total": 13159.06,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1096-1",
+        "total": 46908.16,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1096-2",
+        "total": 33495.19,
+        "status": "shipped",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2576
+    }
+  },
+  {
+    "user_id": "u-100097",
+    "is_active": true,
+    "registration_date": "2023-07-16T05:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Кузнецов",
+      "email": "user97@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "145714"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1097-0",
+        "total": 697.64,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1097-1",
+        "total": 4881.85,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4112
+    }
+  },
+  {
+    "user_id": "u-100098",
+    "is_active": true,
+    "registration_date": "2023-11-09T23:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user98@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "117078"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1098-0",
+        "total": 18257.23,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 206
+    }
+  },
+  {
+    "user_id": "u-100099",
+    "is_active": true,
+    "registration_date": "2023-10-09T08:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user99@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "176019"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1099-0",
+        "total": 21616.09,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1775
+    }
+  },
+  {
+    "user_id": "u-100100",
+    "is_active": true,
+    "registration_date": "2023-04-27T07:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Попов",
+      "email": "user100@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "182972"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1100-0",
+        "total": 31566.26,
+        "status": "delivered",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1100-1",
+        "total": 15222.92,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 4422
+    }
+  },
+  {
+    "user_id": "u-100101",
+    "is_active": true,
+    "registration_date": "2023-08-25T17:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Кузнецов",
+      "email": "user101@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "176982"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1101-0",
+        "total": 24316.44,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1258
+    }
+  },
+  {
+    "user_id": "u-100102",
+    "is_active": true,
+    "registration_date": "2023-02-17T13:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Кузнецов",
+      "email": "user102@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "160675"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1102-0",
+        "total": 49671.49,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 970
+    }
+  },
+  {
+    "user_id": "u-100103",
+    "is_active": true,
+    "registration_date": "2023-02-04T15:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Смирнов",
+      "email": "user103@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "198061"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1103-0",
+        "total": 31929.77,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3963
+    }
+  },
+  {
+    "user_id": "u-100104",
+    "is_active": true,
+    "registration_date": "2023-03-28T02:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Кузнецов",
+      "email": "user104@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "161109"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1104-0",
+        "total": 24423.65,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 384
+    }
+  },
+  {
+    "user_id": "u-100105",
+    "is_active": true,
+    "registration_date": "2023-09-27T03:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user105@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "156417"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1105-0",
+        "total": 32799.38,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1105-1",
+        "total": 25441.68,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3037
+    }
+  },
+  {
+    "user_id": "u-100106",
+    "is_active": false,
+    "registration_date": "2023-01-01T10:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Иванов",
+      "email": "user106@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "183838"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1106-0",
+        "total": 33818.79,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1106-1",
+        "total": 28069.54,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2736
+    }
+  },
+  {
+    "user_id": "u-100107",
+    "is_active": false,
+    "registration_date": "2023-08-10T01:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user107@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "175676"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1107-0",
+        "total": 49378.33,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1107-1",
+        "total": 39418.89,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1107-2",
+        "total": 9349.05,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4323
+    }
+  },
+  {
+    "user_id": "u-100108",
+    "is_active": true,
+    "registration_date": "2023-06-09T21:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user108@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "142892"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1108-0",
+        "total": 36175.75,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1108-1",
+        "total": 27187.16,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4
+    }
+  },
+  {
+    "user_id": "u-100109",
+    "is_active": false,
+    "registration_date": "2023-03-06T21:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Иванов",
+      "email": "user109@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "122890"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1109-0",
+        "total": 9338.8,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 330
+    }
+  },
+  {
+    "user_id": "u-100110",
+    "is_active": true,
+    "registration_date": "2023-09-14T19:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Петров",
+      "email": "user110@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "164481"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1110-0",
+        "total": 38985.4,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2532
+    }
+  },
+  {
+    "user_id": "u-100111",
+    "is_active": true,
+    "registration_date": "2023-02-25T03:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Сидоров",
+      "email": "user111@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "168544"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1111-0",
+        "total": 31476.42,
+        "status": "processing",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1111-1",
+        "total": 45785.16,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1111-2",
+        "total": 7461.85,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 134
+    }
+  },
+  {
+    "user_id": "u-100112",
+    "is_active": false,
+    "registration_date": "2023-07-07T01:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Смирнов",
+      "email": "user112@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "109052"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1112-0",
+        "total": 24588.18,
+        "status": "delivered",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4339
+    }
+  },
+  {
+    "user_id": "u-100113",
+    "is_active": false,
+    "registration_date": "2023-11-07T02:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Иванов",
+      "email": "user113@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "132345"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1113-0",
+        "total": 22243.01,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1113-1",
+        "total": 26281.23,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 354
+    }
+  },
+  {
+    "user_id": "u-100114",
+    "is_active": true,
+    "registration_date": "2023-05-13T18:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Иванов",
+      "email": "user114@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "110048"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1114-0",
+        "total": 46436.21,
+        "status": "shipped",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1083
+    }
+  },
+  {
+    "user_id": "u-100115",
+    "is_active": true,
+    "registration_date": "2023-03-16T17:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user115@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "145065"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1115-0",
+        "total": 22752.37,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 338
+    }
+  },
+  {
+    "user_id": "u-100116",
+    "is_active": true,
+    "registration_date": "2023-07-14T14:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Петров",
+      "email": "user116@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "177375"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1116-0",
+        "total": 35675.53,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1116-1",
+        "total": 9247.66,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1116-2",
+        "total": 12228.14,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3870
+    }
+  },
+  {
+    "user_id": "u-100117",
+    "is_active": true,
+    "registration_date": "2023-09-26T15:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Петров",
+      "email": "user117@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "165972"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1117-0",
+        "total": 16662.43,
+        "status": "shipped",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1688
+    }
+  },
+  {
+    "user_id": "u-100118",
+    "is_active": true,
+    "registration_date": "2023-05-01T03:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Сидоров",
+      "email": "user118@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "191291"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1118-0",
+        "total": 19448.87,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 249
+    }
+  },
+  {
+    "user_id": "u-100119",
+    "is_active": false,
+    "registration_date": "2023-10-17T14:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Иванов",
+      "email": "user119@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "156805"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1119-0",
+        "total": 979.42,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1119-1",
+        "total": 24533.49,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2993
+    }
+  },
+  {
+    "user_id": "u-100120",
+    "is_active": false,
+    "registration_date": "2023-03-05T02:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Иванов",
+      "email": "user120@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "126153"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1120-0",
+        "total": 46065.4,
+        "status": "cancelled",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1120-1",
+        "total": 30064.23,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1120-2",
+        "total": 8631.07,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2419
+    }
+  },
+  {
+    "user_id": "u-100121",
+    "is_active": true,
+    "registration_date": "2023-01-13T02:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Иванов",
+      "email": "user121@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "179394"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1121-0",
+        "total": 33673.53,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2814
+    }
+  },
+  {
+    "user_id": "u-100122",
+    "is_active": true,
+    "registration_date": "2023-11-17T11:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Кузнецов",
+      "email": "user122@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "134235"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1122-0",
+        "total": 30697.31,
+        "status": "processing",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1697
+    }
+  },
+  {
+    "user_id": "u-100123",
+    "is_active": false,
+    "registration_date": "2023-12-09T20:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Кузнецов",
+      "email": "user123@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "186226"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1123-0",
+        "total": 28240.64,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1123-1",
+        "total": 18848.15,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1123-2",
+        "total": 9152.88,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1891
+    }
+  },
+  {
+    "user_id": "u-100124",
+    "is_active": true,
+    "registration_date": "2023-06-28T16:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user124@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "124610"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1124-0",
+        "total": 34886.92,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1124-1",
+        "total": 28867.36,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1124-2",
+        "total": 45399.38,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2650
+    }
+  },
+  {
+    "user_id": "u-100125",
+    "is_active": true,
+    "registration_date": "2023-04-24T15:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Попов",
+      "email": "user125@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "123709"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1125-0",
+        "total": 47796.84,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1278
+    }
+  },
+  {
+    "user_id": "u-100126",
+    "is_active": false,
+    "registration_date": "2023-07-12T12:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Смирнов",
+      "email": "user126@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "116053"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1126-0",
+        "total": 41115.07,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4865
+    }
+  },
+  {
+    "user_id": "u-100127",
+    "is_active": true,
+    "registration_date": "2023-10-16T13:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Смирнов",
+      "email": "user127@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "177369"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1127-0",
+        "total": 33491.82,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1127-1",
+        "total": 8036.33,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4567
+    }
+  },
+  {
+    "user_id": "u-100128",
+    "is_active": false,
+    "registration_date": "2023-10-04T18:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user128@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "160161"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1128-0",
+        "total": 7774.72,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1128-1",
+        "total": 28025.79,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1128-2",
+        "total": 48723.46,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 118
+    }
+  },
+  {
+    "user_id": "u-100129",
+    "is_active": true,
+    "registration_date": "2023-09-23T16:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user129@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "107228"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1129-0",
+        "total": 9348.71,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2644
+    }
+  },
+  {
+    "user_id": "u-100130",
+    "is_active": true,
+    "registration_date": "2023-11-12T09:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Смирнов",
+      "email": "user130@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "122242"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1130-0",
+        "total": 2635.64,
+        "status": "shipped",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1130-1",
+        "total": 16933.96,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1074
+    }
+  },
+  {
+    "user_id": "u-100131",
+    "is_active": true,
+    "registration_date": "2023-07-06T17:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Петров",
+      "email": "user131@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "166523"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1131-0",
+        "total": 16493.07,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1131-1",
+        "total": 37485.83,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1131-2",
+        "total": 36115.79,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4980
+    }
+  },
+  {
+    "user_id": "u-100132",
+    "is_active": true,
+    "registration_date": "2023-05-13T06:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Петров",
+      "email": "user132@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "132028"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1132-0",
+        "total": 43205.52,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1132-1",
+        "total": 16454.69,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1284
+    }
+  },
+  {
+    "user_id": "u-100133",
+    "is_active": false,
+    "registration_date": "2023-10-27T10:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user133@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "194329"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1133-0",
+        "total": 21008.67,
+        "status": "cancelled",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1133-1",
+        "total": 27897.67,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 2225
+    }
+  },
+  {
+    "user_id": "u-100134",
+    "is_active": true,
+    "registration_date": "2023-07-25T21:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Иванов",
+      "email": "user134@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "134735"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1134-0",
+        "total": 9854.11,
+        "status": "shipped",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1134-1",
+        "total": 6335.83,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1134-2",
+        "total": 8665.07,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3281
+    }
+  },
+  {
+    "user_id": "u-100135",
+    "is_active": true,
+    "registration_date": "2023-11-26T00:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Сидоров",
+      "email": "user135@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "114202"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1135-0",
+        "total": 30087.48,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1135-1",
+        "total": 33422.24,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1135-2",
+        "total": 1488.65,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 3385
+    }
+  },
+  {
+    "user_id": "u-100136",
+    "is_active": true,
+    "registration_date": "2023-08-04T15:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Смирнов",
+      "email": "user136@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "114512"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1136-0",
+        "total": 21343.79,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4518
+    }
+  },
+  {
+    "user_id": "u-100137",
+    "is_active": true,
+    "registration_date": "2023-12-06T02:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Попов",
+      "email": "user137@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "176992"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1137-0",
+        "total": 14410.06,
+        "status": "processing",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1137-1",
+        "total": 14218.87,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2639
+    }
+  },
+  {
+    "user_id": "u-100138",
+    "is_active": true,
+    "registration_date": "2023-01-09T22:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Кузнецов",
+      "email": "user138@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "124517"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1138-0",
+        "total": 22747.04,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 4851
+    }
+  },
+  {
+    "user_id": "u-100139",
+    "is_active": false,
+    "registration_date": "2023-06-17T07:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Кузнецов",
+      "email": "user139@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "169009"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1139-0",
+        "total": 10275.32,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1139-1",
+        "total": 4210.81,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1139-2",
+        "total": 4738.61,
+        "status": "shipped",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 264
+    }
+  },
+  {
+    "user_id": "u-100140",
+    "is_active": false,
+    "registration_date": "2023-05-22T21:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user140@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "193869"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1140-0",
+        "total": 38862.54,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1140-1",
+        "total": 11399.33,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2874
+    }
+  },
+  {
+    "user_id": "u-100141",
+    "is_active": true,
+    "registration_date": "2023-02-16T10:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Иванов",
+      "email": "user141@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "114359"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1141-0",
+        "total": 39448.57,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1141-1",
+        "total": 46560.66,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 891
+    }
+  },
+  {
+    "user_id": "u-100142",
+    "is_active": true,
+    "registration_date": "2023-12-26T18:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Попов",
+      "email": "user142@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "165491"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1142-0",
+        "total": 49923.2,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1142-1",
+        "total": 42270.5,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 481
+    }
+  },
+  {
+    "user_id": "u-100143",
+    "is_active": false,
+    "registration_date": "2023-10-27T03:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user143@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "112699"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1143-0",
+        "total": 6777.69,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1143-1",
+        "total": 19566.99,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 823
+    }
+  },
+  {
+    "user_id": "u-100144",
+    "is_active": true,
+    "registration_date": "2023-07-28T08:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user144@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "196121"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1144-0",
+        "total": 32553.11,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1144-1",
+        "total": 15816.6,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1144-2",
+        "total": 6949.59,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4820
+    }
+  },
+  {
+    "user_id": "u-100145",
+    "is_active": true,
+    "registration_date": "2023-09-02T22:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Попов",
+      "email": "user145@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "164984"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1145-0",
+        "total": 32840.22,
+        "status": "shipped",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1145-1",
+        "total": 42275.64,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2645
+    }
+  },
+  {
+    "user_id": "u-100146",
+    "is_active": true,
+    "registration_date": "2023-07-23T01:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Иванов",
+      "email": "user146@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "172188"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1146-0",
+        "total": 31924.62,
+        "status": "cancelled",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1146-1",
+        "total": 12967.84,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2069
+    }
+  },
+  {
+    "user_id": "u-100147",
+    "is_active": true,
+    "registration_date": "2023-08-04T04:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Попов",
+      "email": "user147@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "154047"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1147-0",
+        "total": 15700.97,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1147-1",
+        "total": 28327.06,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1147-2",
+        "total": 22591.75,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1809
+    }
+  },
+  {
+    "user_id": "u-100148",
+    "is_active": true,
+    "registration_date": "2023-02-22T01:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user148@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "146247"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1148-0",
+        "total": 36875.9,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1148-1",
+        "total": 49481.09,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1148-2",
+        "total": 18706.24,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3816
+    }
+  },
+  {
+    "user_id": "u-100149",
+    "is_active": false,
+    "registration_date": "2023-10-13T20:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Иванов",
+      "email": "user149@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "188462"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1149-0",
+        "total": 24673.99,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3705
+    }
+  },
+  {
+    "user_id": "u-100150",
+    "is_active": true,
+    "registration_date": "2023-02-10T10:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Сидоров",
+      "email": "user150@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "162347"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1150-0",
+        "total": 41829.36,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1529
+    }
+  },
+  {
+    "user_id": "u-100151",
+    "is_active": true,
+    "registration_date": "2023-07-12T02:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Иванов",
+      "email": "user151@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "112923"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1151-0",
+        "total": 7285.89,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1151-1",
+        "total": 48690.02,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 443
+    }
+  },
+  {
+    "user_id": "u-100152",
+    "is_active": true,
+    "registration_date": "2023-10-18T14:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user152@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "120021"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1152-0",
+        "total": 10642.21,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4335
+    }
+  },
+  {
+    "user_id": "u-100153",
+    "is_active": true,
+    "registration_date": "2023-02-02T04:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Попов",
+      "email": "user153@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "103865"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1153-0",
+        "total": 4100.61,
+        "status": "shipped",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 39
+    }
+  },
+  {
+    "user_id": "u-100154",
+    "is_active": true,
+    "registration_date": "2023-12-07T13:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Петров",
+      "email": "user154@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "182102"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1154-0",
+        "total": 46676.87,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1960
+    }
+  },
+  {
+    "user_id": "u-100155",
+    "is_active": false,
+    "registration_date": "2023-02-08T04:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Сидоров",
+      "email": "user155@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "158464"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1155-0",
+        "total": 48424.75,
+        "status": "cancelled",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1155-1",
+        "total": 3416.07,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 180
+    }
+  },
+  {
+    "user_id": "u-100156",
+    "is_active": true,
+    "registration_date": "2023-01-16T01:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "user156@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "160293"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1156-0",
+        "total": 31359.24,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1156-1",
+        "total": 16827.21,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1156-2",
+        "total": 23251.42,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1753
+    }
+  },
+  {
+    "user_id": "u-100157",
+    "is_active": false,
+    "registration_date": "2023-12-28T18:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Попов",
+      "email": "user157@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "121877"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1157-0",
+        "total": 46802.42,
+        "status": "cancelled",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1157-1",
+        "total": 31391.87,
+        "status": "shipped",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1971
+    }
+  },
+  {
+    "user_id": "u-100158",
+    "is_active": true,
+    "registration_date": "2023-07-27T15:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user158@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "160512"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1158-0",
+        "total": 18866.41,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1158-1",
+        "total": 9295.82,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1158-2",
+        "total": 30367.86,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4143
+    }
+  },
+  {
+    "user_id": "u-100159",
+    "is_active": true,
+    "registration_date": "2023-08-16T10:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Иванов",
+      "email": "user159@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "172040"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1159-0",
+        "total": 25091.52,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 1717
+    }
+  },
+  {
+    "user_id": "u-100160",
+    "is_active": true,
+    "registration_date": "2023-09-23T10:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user160@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "123866"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1160-0",
+        "total": 7797.22,
+        "status": "shipped",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1160-1",
+        "total": 47582.13,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1160-2",
+        "total": 8566.55,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2385
+    }
+  },
+  {
+    "user_id": "u-100161",
+    "is_active": true,
+    "registration_date": "2023-06-08T07:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Сидоров",
+      "email": "user161@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "159619"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1161-0",
+        "total": 25617.37,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1161-1",
+        "total": 23459.97,
+        "status": "processing",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1463
+    }
+  },
+  {
+    "user_id": "u-100162",
+    "is_active": true,
+    "registration_date": "2023-02-28T02:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Попов",
+      "email": "user162@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "151576"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1162-0",
+        "total": 46250.81,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1162-1",
+        "total": 15174.09,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 206
+    }
+  },
+  {
+    "user_id": "u-100163",
+    "is_active": false,
+    "registration_date": "2023-10-12T19:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Иванов",
+      "email": "user163@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "193413"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1163-0",
+        "total": 22647.0,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4567
+    }
+  },
+  {
+    "user_id": "u-100164",
+    "is_active": true,
+    "registration_date": "2023-01-04T16:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Попов",
+      "email": "user164@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "106575"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1164-0",
+        "total": 31784.19,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4679
+    }
+  },
+  {
+    "user_id": "u-100165",
+    "is_active": true,
+    "registration_date": "2023-02-18T06:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user165@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "186339"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1165-0",
+        "total": 21180.39,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1165-1",
+        "total": 24170.46,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1050
+    }
+  },
+  {
+    "user_id": "u-100166",
+    "is_active": true,
+    "registration_date": "2023-02-01T14:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user166@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "116586"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1166-0",
+        "total": 6459.01,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4084
+    }
+  },
+  {
+    "user_id": "u-100167",
+    "is_active": true,
+    "registration_date": "2023-01-08T14:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Попов",
+      "email": "user167@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "119974"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1167-0",
+        "total": 4350.54,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1167-1",
+        "total": 37817.3,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1167-2",
+        "total": 42504.1,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2712
+    }
+  },
+  {
+    "user_id": "u-100168",
+    "is_active": true,
+    "registration_date": "2023-12-28T14:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user168@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "188090"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1168-0",
+        "total": 30796.4,
+        "status": "delivered",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1168-1",
+        "total": 24472.26,
+        "status": "cancelled",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1168-2",
+        "total": 36155.08,
+        "status": "cancelled",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 3594
+    }
+  },
+  {
+    "user_id": "u-100169",
+    "is_active": true,
+    "registration_date": "2023-06-20T19:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Иванов",
+      "email": "user169@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "106825"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1169-0",
+        "total": 18862.72,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 3531
+    }
+  },
+  {
+    "user_id": "u-100170",
+    "is_active": true,
+    "registration_date": "2023-08-17T05:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user170@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "179092"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1170-0",
+        "total": 44023.08,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4785
+    }
+  },
+  {
+    "user_id": "u-100171",
+    "is_active": false,
+    "registration_date": "2023-03-02T13:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "user171@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "100316"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1171-0",
+        "total": 20060.17,
+        "status": "processing",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1171-1",
+        "total": 46144.54,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4177
+    }
+  },
+  {
+    "user_id": "u-100172",
+    "is_active": true,
+    "registration_date": "2023-12-19T02:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Попов",
+      "email": "user172@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "184522"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1172-0",
+        "total": 17875.29,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1172-1",
+        "total": 47768.21,
+        "status": "shipped",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 675
+    }
+  },
+  {
+    "user_id": "u-100173",
+    "is_active": false,
+    "registration_date": "2023-04-13T13:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Кузнецов",
+      "email": "user173@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "131890"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1173-0",
+        "total": 18481.4,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1173-1",
+        "total": 48482.16,
+        "status": "cancelled",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1173-2",
+        "total": 20513.41,
+        "status": "processing",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 4988
+    }
+  },
+  {
+    "user_id": "u-100174",
+    "is_active": true,
+    "registration_date": "2023-11-19T13:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user174@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "157231"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1174-0",
+        "total": 12819.87,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4646
+    }
+  },
+  {
+    "user_id": "u-100175",
+    "is_active": true,
+    "registration_date": "2023-03-09T09:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Смирнов",
+      "email": "user175@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "124523"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1175-0",
+        "total": 7985.84,
+        "status": "delivered",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1175-1",
+        "total": 13304.97,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 415
+    }
+  },
+  {
+    "user_id": "u-100176",
+    "is_active": true,
+    "registration_date": "2023-09-12T17:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Петров",
+      "email": "user176@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "186889"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1176-0",
+        "total": 27194.26,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2906
+    }
+  },
+  {
+    "user_id": "u-100177",
+    "is_active": true,
+    "registration_date": "2023-05-01T14:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user177@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "189766"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1177-0",
+        "total": 47291.42,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1177-1",
+        "total": 27468.83,
+        "status": "cancelled",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2535
+    }
+  },
+  {
+    "user_id": "u-100178",
+    "is_active": true,
+    "registration_date": "2023-06-25T02:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Кузнецов",
+      "email": "user178@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "148967"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1178-0",
+        "total": 47834.71,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1178-1",
+        "total": 9161.08,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 1733
+    }
+  },
+  {
+    "user_id": "u-100179",
+    "is_active": false,
+    "registration_date": "2023-06-18T22:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Попов",
+      "email": "user179@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "161526"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1179-0",
+        "total": 35317.54,
+        "status": "shipped",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 4438
+    }
+  },
+  {
+    "user_id": "u-100180",
+    "is_active": true,
+    "registration_date": "2023-02-16T21:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Петров",
+      "email": "user180@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "147415"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1180-0",
+        "total": 31991.27,
+        "status": "shipped",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1180-1",
+        "total": 8243.57,
+        "status": "shipped",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1180-2",
+        "total": 49380.74,
+        "status": "delivered",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1299
+    }
+  },
+  {
+    "user_id": "u-100181",
+    "is_active": true,
+    "registration_date": "2023-12-07T02:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Кузнецов",
+      "email": "user181@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "167748"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1181-0",
+        "total": 23619.34,
+        "status": "delivered",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1181-1",
+        "total": 3309.99,
+        "status": "processing",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4696
+    }
+  },
+  {
+    "user_id": "u-100182",
+    "is_active": true,
+    "registration_date": "2023-11-08T09:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "email": "user182@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "164596"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1182-0",
+        "total": 12731.4,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1182-1",
+        "total": 4733.19,
+        "status": "delivered",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1382
+    }
+  },
+  {
+    "user_id": "u-100183",
+    "is_active": true,
+    "registration_date": "2023-12-06T03:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Попов",
+      "email": "user183@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "111565"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1183-0",
+        "total": 25507.36,
+        "status": "cancelled",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1765
+    }
+  },
+  {
+    "user_id": "u-100184",
+    "is_active": false,
+    "registration_date": "2023-02-24T06:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Сидоров",
+      "email": "user184@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "128889"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1184-0",
+        "total": 12687.46,
+        "status": "delivered",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1184-1",
+        "total": 34158.6,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1184-2",
+        "total": 27958.46,
+        "status": "delivered",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 3133
+    }
+  },
+  {
+    "user_id": "u-100185",
+    "is_active": true,
+    "registration_date": "2023-03-24T19:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "user185@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "163119"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1185-0",
+        "total": 26691.63,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1185-1",
+        "total": 4067.92,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 633
+    }
+  },
+  {
+    "user_id": "u-100186",
+    "is_active": true,
+    "registration_date": "2023-12-27T16:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Петров",
+      "email": "user186@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "131307"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1186-0",
+        "total": 2300.0,
+        "status": "processing",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1186-1",
+        "total": 4444.07,
+        "status": "processing",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1186-2",
+        "total": 6879.09,
+        "status": "delivered",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2890
+    }
+  },
+  {
+    "user_id": "u-100187",
+    "is_active": true,
+    "registration_date": "2023-03-21T20:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Смирнов",
+      "email": "user187@example.com",
+      "address": {
+        "city": "Санкт-Петербург",
+        "zip_code": "197506"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1187-0",
+        "total": 25976.11,
+        "status": "processing",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1187-1",
+        "total": 44370.08,
+        "status": "processing",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2970
+    }
+  },
+  {
+    "user_id": "u-100188",
+    "is_active": true,
+    "registration_date": "2023-09-11T02:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Сидоров",
+      "email": "user188@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "172534"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1188-0",
+        "total": 27612.35,
+        "status": "processing",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2993
+    }
+  },
+  {
+    "user_id": "u-100189",
+    "is_active": false,
+    "registration_date": "2023-07-26T09:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Сидоров",
+      "email": "user189@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "144825"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1189-0",
+        "total": 48838.27,
+        "status": "processing",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1189-1",
+        "total": 45266.09,
+        "status": "shipped",
+        "items_count": 1
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 4041
+    }
+  },
+  {
+    "user_id": "u-100190",
+    "is_active": true,
+    "registration_date": "2023-06-27T14:00:00Z",
+    "profile": {
+      "first_name": "Дмитрий",
+      "last_name": "Иванов",
+      "email": "user190@example.com",
+      "address": {
+        "city": "Новосибирск",
+        "zip_code": "162427"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1190-0",
+        "total": 23195.76,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1190-1",
+        "total": 6678.17,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 4073
+    }
+  },
+  {
+    "user_id": "u-100191",
+    "is_active": true,
+    "registration_date": "2023-05-18T15:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Попов",
+      "email": "user191@example.com",
+      "address": {
+        "city": "Екатеринбург",
+        "zip_code": "136300"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1191-0",
+        "total": 49512.33,
+        "status": "processing",
+        "items_count": 3
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 2046
+    }
+  },
+  {
+    "user_id": "u-100192",
+    "is_active": true,
+    "registration_date": "2023-08-01T18:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Сидоров",
+      "email": "user192@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "124425"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1192-0",
+        "total": 25156.21,
+        "status": "cancelled",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1192-1",
+        "total": 43771.73,
+        "status": "processing",
+        "items_count": 3
+      },
+      {
+        "order_id": "ORD-1192-2",
+        "total": 2245.27,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 2050
+    }
+  },
+  {
+    "user_id": "u-100193",
+    "is_active": false,
+    "registration_date": "2023-04-16T08:00:00Z",
+    "profile": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "email": "user193@example.com",
+      "address": {
+        "city": "Нижний Новгород",
+        "zip_code": "159728"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1193-0",
+        "total": 34209.82,
+        "status": "shipped",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1851
+    }
+  },
+  {
+    "user_id": "u-100194",
+    "is_active": true,
+    "registration_date": "2023-02-21T20:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Попов",
+      "email": "user194@example.com",
+      "address": {
+        "city": "Казань",
+        "zip_code": "122742"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1194-0",
+        "total": 33997.85,
+        "status": "shipped",
+        "items_count": 1
+      },
+      {
+        "order_id": "ORD-1194-1",
+        "total": 14131.83,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 1250
+    }
+  },
+  {
+    "user_id": "u-100195",
+    "is_active": true,
+    "registration_date": "2023-03-09T12:00:00Z",
+    "profile": {
+      "first_name": "Андрей",
+      "last_name": "Иванов",
+      "email": "user195@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "176636"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1195-0",
+        "total": 27352.69,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1195-1",
+        "total": 25633.83,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 4387
+    }
+  },
+  {
+    "user_id": "u-100196",
+    "is_active": false,
+    "registration_date": "2023-09-01T14:00:00Z",
+    "profile": {
+      "first_name": "Михаил",
+      "last_name": "Петров",
+      "email": "user196@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "155971"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1196-0",
+        "total": 29151.34,
+        "status": "cancelled",
+        "items_count": 5
+      },
+      {
+        "order_id": "ORD-1196-1",
+        "total": 3906.12,
+        "status": "delivered",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Gold",
+      "points": 358
+    }
+  },
+  {
+    "user_id": "u-100197",
+    "is_active": false,
+    "registration_date": "2023-07-03T19:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Смирнов",
+      "email": "user197@example.com",
+      "address": {
+        "city": "Челябинск",
+        "zip_code": "196326"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1197-0",
+        "total": 17081.24,
+        "status": "shipped",
+        "items_count": 2
+      },
+      {
+        "order_id": "ORD-1197-1",
+        "total": 10694.29,
+        "status": "cancelled",
+        "items_count": 4
+      },
+      {
+        "order_id": "ORD-1197-2",
+        "total": 28732.66,
+        "status": "shipped",
+        "items_count": 4
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Bronze",
+      "points": 1947
+    }
+  },
+  {
+    "user_id": "u-100198",
+    "is_active": true,
+    "registration_date": "2023-04-27T13:00:00Z",
+    "profile": {
+      "first_name": "Сергей",
+      "last_name": "Кузнецов",
+      "email": "user198@example.com",
+      "address": {
+        "city": "Самара",
+        "zip_code": "193070"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1198-0",
+        "total": 36329.21,
+        "status": "cancelled",
+        "items_count": 2
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Platinum",
+      "points": 2477
+    }
+  },
+  {
+    "user_id": "u-100199",
+    "is_active": false,
+    "registration_date": "2023-04-18T07:00:00Z",
+    "profile": {
+      "first_name": "Алексей",
+      "last_name": "Кузнецов",
+      "email": "user199@example.com",
+      "address": {
+        "city": "Москва",
+        "zip_code": "148483"
+      }
+    },
+    "recent_orders": [
+      {
+        "order_id": "ORD-1199-0",
+        "total": 13327.76,
+        "status": "cancelled",
+        "items_count": 5
+      }
+    ],
+    "loyalty_program": {
+      "tier": "Silver",
+      "points": 3872
+    }
+  }
+]
