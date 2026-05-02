@@ -76,3 +76,10 @@ class TestEdgeCases():
         archiver.decode(encoded, decoded)
 
         assert input_path.read_bytes() == decoded.read_bytes()
+
+    def test_wrong_metadata(self, archiver, tmp_path):
+        input_path = tmp_path / "wrong_metadata.lzw"
+        input_path.write_bytes(b"ABCDEF")
+
+        with pytest.raises(ValueError):
+            archiver.decode(input_path)

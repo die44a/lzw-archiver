@@ -44,11 +44,12 @@ class LZWArchiver():
         output_path = Path(output_path or
                            input_path.with_suffix(input_path.suffix + ".lzw"))
 
-        # header = b'LZW' + self.max_dict_size.to_bytes(2, self.BYTE_ORDER)  # TODO: write down file header
-
         with (open(input_path, 'rb') as input_file,
               open(output_path, 'wb') as output_file):
             codes = self._bytes_to_codes(self._read_bytes(input_file))
+
+            header = b'LZW'
+            output_file.write(header)
 
             for code in codes:
                 output_file.write(code.to_bytes(CODE_SIZE, BYTE_ORDER))
@@ -79,6 +80,10 @@ class LZWArchiver():
 
         with (open(input_path, 'rb') as input_file,
               open(output_path, 'wb') as output_file):
+            header = input_file.read(3)
+            if header != b"LZW":
+                raise ValueError(f"File {input_file} has wrong metadata")
+
             bytes = self._codes_to_bytes(self._read_codes(input_file))
 
             for byte in bytes:
