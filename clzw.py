@@ -13,8 +13,8 @@ ERROR_EXCEPTION = 1
 ERROR_PYTHON_VERSION = 2
 ERROR_MODULES_MISSING = 3
 
-if sys.version_info < (3, 4):
-    print('Use python >= 3.4', file=sys.stderr)
+if sys.version_info < (3, 10):
+    print('Use python >= 3.10', file=sys.stderr)
     sys.exit(ERROR_PYTHON_VERSION)
 
 try:
