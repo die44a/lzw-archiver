@@ -1,11 +1,9 @@
+import pytest
 import filecmp
 import random
 import shutil
-import string
 from pathlib import Path
-
 from logic.lzw import LZWArchiver
-import pytest
 
 CURRENT_DIR = Path(__file__).parent
 DATA_DIR = CURRENT_DIR / 'tests_data'

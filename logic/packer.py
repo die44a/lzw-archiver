@@ -26,3 +26,9 @@ class TarPacker:
             tar.extractall(path=output_path, filter="data")
 
         return output_path
+
+
+if __name__ == "__main__":
+    packer = TarPacker()
+    packer.pack('lorem_ipsum.txt', 'lorem_ipsum.tar')
+    packer.unpack('lorem_ipsum.tar', 'new_lorem')

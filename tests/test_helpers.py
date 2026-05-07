@@ -1,6 +1,6 @@
+import pytest
 from logic.lzw import LZWArchiver, DictMode
 from logic.constants import BYTE_ORDER, CODE_SIZE
-import pytest
 
 
 class TestDictInitializer():
