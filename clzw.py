@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-
 """Console version of LZW archiver"""
 
 
-import re
-import os
-import logging
-import inspect
-import enum
+from logic.packer import TarPacker
+from pathlib import Path
+import tempfile
 import argparse
 import sys
 
@@ -38,6 +35,7 @@ __email__ = 'dim4ig2007@gmail.com'
 
 def parse_args():
     """Command line arguments parsing"""
+
     parser = argparse.ArgumentParser(
         prog='LZW-Archiver',
         description=f'Compresses or extracts files from specified file or directory',
@@ -60,13 +58,14 @@ def parse_args():
         action='store_true',
         help='compress file or directory')
 
-    parser.add_argument('PATH', type=str,
-                        help='path to the file or directory')
+    parser.add_argument(
+        'PATH', type=str,
+        help='path to the file or directory to compress/extract')
 
     parser.add_argument(
         '-o', '--output', type=str,
         metavar='OUTPUT',
-        help='path to the output directory')
+        help='path to the output directory after extraction')
 
     parser.add_argument(
         '-f', '--force',
@@ -77,7 +76,42 @@ def parse_args():
 
 
 def main():
-    pass
+    args = parse_args()
+
+    packer = TarPacker()
+    archiver = LZWArchiver()
+
+    input_path = Path(args.PATH)
+
+    tmp_path = None
+    try:
+        if args.compress:
+            output = input_path.with_name(input_path.name + '.lzw')
+
+            tmp = tempfile.NamedTemporaryFile(mode='w', delete=False)
+            tmp_path = Path(tmp.name)
+            tmp.close()
+
+            packed = packer.pack(input_path, tmp_path)
+            archiver.encode(packed, output)
+
+        elif args.extract:
+            if args.output:
+                output = Path(args.output).resolve()
+            else:
+                clean_name = input_path.name.split('.')[0]
+                output = input_path.parent / clean_name
+
+            tmp = tempfile.NamedTemporaryFile(mode='r', delete=False)
+            tmp_path = Path(tmp.name)
+            tmp.close()
+
+            archiver.decode(input_path, tmp_path)
+            unpacked = packer.unpack(tmp_path, output)
+
+    finally:
+        if tmp_path and tmp_path.exists():
+            tmp_path.unlink()
 
 
 if __name__ == "__main__":
