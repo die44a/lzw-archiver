@@ -135,11 +135,19 @@ def parse_args():
 def main():
     "Program entry point"
     args = parse_args()
-
     packer = TarPacker()
     archiver = LZWArchiver()
-
     input_path = Path(args.PATH)
+
+    if not input_path.exists():
+        print(
+            f"Error: Input path does not exist: {input_path}", file=sys.stderr)
+        sys.exit(ERROR_EXCEPTION)
+
+    if args.extract and input_path.suffix != '.lzw':
+        print(
+            f"Error: File {input_path.name} must have .lzw extension", file=sys.stderr)
+        sys.exit(ERROR_EXCEPTION)
 
     tmp_path = None
     try:  # Using 'try' construction to delete tmp file at the end
@@ -148,7 +156,7 @@ def main():
                 input_path.with_name(input_path.name + '.lzw'))
 
             if output.exists() and not args.force:
-                print('Error:')
+                print(f'Error:')
                 print(f'Output file/directory already exists: {output}')
                 print(f'Warning: continuing will overwrite its contents')
                 if not confirm():
@@ -169,7 +177,7 @@ def main():
 
             if output.exists():
                 if not args.force:
-                    print('Error:')
+                    print(f'Error:')
                     print(f'Output file/directory already exists: {output}')
                     print(f'Warning: continuing will overwrite its contents')
                     affected = collect_targets(output)
@@ -191,6 +199,14 @@ def main():
 
             print(
                 f'{input_path.name} was succesfully extracted to the directory {output}')
+
+    except (FileNotFoundError, ValueError, RuntimeError) as e:
+        print(f"\nError: {e}", file=sys.stderr)
+        sys.exit(ERROR_EXCEPTION)
+
+    except Exception as e:
+        print(f"\nError: {e}", file=sys.stderr)
+        sys.exit(ERROR_EXCEPTION)
 
     finally:
         if tmp_path and tmp_path.exists():

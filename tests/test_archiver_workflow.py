@@ -79,5 +79,5 @@ class TestEdgeCases():
         input_path = tmp_path / "wrong_metadata.lzw"
         input_path.write_bytes(b"ABCDEF")
 
-        with pytest.raises(ValueError):
+        with pytest.raises(RuntimeError):
             archiver.decode(input_path)

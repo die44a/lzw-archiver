@@ -35,6 +35,7 @@ class LZWArchiver():
 
         Raises:
             FileNotFoundError: If input file was not found
+            RuntimeError: If something went wrong
         """
         input_path = Path(input_path)
 
@@ -43,16 +44,20 @@ class LZWArchiver():
 
         output_path = Path(output_path or
                            input_path.with_suffix(input_path.suffix + ".lzw"))
+        try:
+            with (open(input_path, 'rb') as input_file,
+                  open(output_path, 'wb') as output_file):
+                codes = self._bytes_to_codes(self._read_bytes(input_file))
 
-        with (open(input_path, 'rb') as input_file,
-              open(output_path, 'wb') as output_file):
-            codes = self._bytes_to_codes(self._read_bytes(input_file))
+                header = b'LZW'
+                output_file.write(header)
 
-            header = b'LZW'
-            output_file.write(header)
-
-            for code in codes:
-                output_file.write(code.to_bytes(CODE_SIZE, BYTE_ORDER))
+                for code in codes:
+                    output_file.write(code.to_bytes(CODE_SIZE, BYTE_ORDER))
+        except Exception as e:
+            if output_path.exists:
+                output_path.unlink()
+            raise RuntimeError(f"LZW encoding failed: {e}")
 
     def decode(self, input_path: str | Path,
                output_path: str | Path = None) -> None:
@@ -65,6 +70,7 @@ class LZWArchiver():
         Raises:
             FileNotFoundError: If input file was not found
             ValueError: if input file has no .lzw extention
+            RuntimeError: if someting went wrong
         """
         input_path = Path(input_path)
 
@@ -78,16 +84,21 @@ class LZWArchiver():
             original_name = input_path.stem
             output_path = input_path.parent / f"decoded_{original_name}"
 
-        with (open(input_path, 'rb') as input_file,
-              open(output_path, 'wb') as output_file):
-            header = input_file.read(3)
-            if header != b"LZW":
-                raise ValueError(f"File {input_file} has wrong metadata")
+        try:
+            with (open(input_path, 'rb') as input_file,
+                  open(output_path, 'wb') as output_file):
+                header = input_file.read(3)
+                if header != b"LZW":
+                    raise ValueError(f"File {input_file} has wrong metadata")
 
-            bytes = self._codes_to_bytes(self._read_codes(input_file))
+                bytes = self._codes_to_bytes(self._read_codes(input_file))
 
-            for byte in bytes:
-                output_file.write(byte)
+                for byte in bytes:
+                    output_file.write(byte)
+        except Exception as e:
+            if output_path.exists():
+                output_path.unlink()
+            raise RuntimeError(f"LZW decoding failed: {e}")
 
     @staticmethod
     def _init_dict(mode: DictMode) -> dict[bytes, int] | dict[int, bytes]:
