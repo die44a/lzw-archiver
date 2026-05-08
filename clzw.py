@@ -2,6 +2,8 @@
 """Console version of LZW archiver"""
 
 
+import shutil
+
 from logic.packer import TarPacker
 from pathlib import Path
 import tempfile
@@ -31,6 +33,61 @@ except Exception as e:
 __version__ = '0.1'
 __author__ = 'Dima Borisov'
 __email__ = 'dim4ig2007@gmail.com'
+
+
+def split_name(path: Path):
+    suffixes = ''.join(path.suffixes)
+    root = path.name[:-len(suffixes)] if suffixes else path.name
+    return root, suffixes
+
+
+def next_free(path: Path) -> Path:
+    if not path.exists():
+        return path
+    root, suffixes = split_name(path)
+    i = 1
+    while True:
+        candidate = path.with_name(f"{root}({i}){suffixes}")
+        if not candidate.exists():
+            return candidate
+        i += 1
+
+
+def collect_targets(path: Path):
+    if path.is_file():
+        return [path]
+
+    result = []
+
+    for item in path.iterdir():
+        if item.is_file():
+            result.append(item)
+        if item.is_dir():
+            result.extend(collect_targets(item))
+    return result
+
+
+def show_targets(targets):
+    print('These files/directories will be affected:\n')
+    for t in targets:
+        print(" -", t)
+
+
+def confirm():
+    answer = input('\nProceed? (y/n): ').strip().lower()
+    return answer in ('y', 'yes')
+
+
+def clear(path: Path):
+    if not path.exists():
+        return
+
+    if path.is_file() or path.is_symlink():
+        path.unlink()
+    if not path.exists():
+        return
+
+    shutil.rmtree(path, ignore_errors=True)
 
 
 def parse_args():
@@ -70,12 +127,13 @@ def parse_args():
     parser.add_argument(
         '-f', '--force',
         action='store_true',
-        help='rewrite existing output directory if exists')
+        help='overwrite existing files and directories without prompting')
 
     return parser.parse_args()
 
 
 def main():
+    "Program entry point"
     args = parse_args()
 
     packer = TarPacker()
@@ -84,30 +142,55 @@ def main():
     input_path = Path(args.PATH)
 
     tmp_path = None
-    try:
+    try:  # Using 'try' construction to delete tmp file at the end
         if args.compress:
-            output = input_path.with_name(input_path.name + '.lzw')
+            output = Path(args.output) if args.output else next_free(
+                input_path.with_name(input_path.name + '.lzw'))
 
-            tmp = tempfile.NamedTemporaryFile(mode='w', delete=False)
+            if output.exists() and not args.force:
+                print('Error:')
+                print(f'Output file/directory already exists: {output}')
+                print(f'Warning: continuing will overwrite its contents')
+                if not confirm():
+                    print('Compressing aborted')
+                    return
+
+            tmp = tempfile.NamedTemporaryFile(delete=False)
             tmp_path = Path(tmp.name)
             tmp.close()
 
             packed = packer.pack(input_path, tmp_path)
             archiver.encode(packed, output)
 
-        elif args.extract:
-            if args.output:
-                output = Path(args.output).resolve()
-            else:
-                clean_name = input_path.name.split('.')[0]
-                output = input_path.parent / clean_name
+            print(f'{input_path.name} was succesfully compressed to {output.name}')
 
-            tmp = tempfile.NamedTemporaryFile(mode='r', delete=False)
+        elif args.extract:
+            output = Path(args.output or split_name(input_path)[0]).resolve()
+
+            if output.exists():
+                if not args.force:
+                    print('Error:')
+                    print(f'Output file/directory already exists: {output}')
+                    print(f'Warning: continuing will overwrite its contents')
+                    affected = collect_targets(output)
+                    show_targets(affected)
+                    if not confirm():
+                        print('Extracting aborted')
+                        return
+
+                clear(output)
+
+            output.mkdir(parents=True, exist_ok=True)
+
+            tmp = tempfile.NamedTemporaryFile(delete=False)
             tmp_path = Path(tmp.name)
             tmp.close()
 
             archiver.decode(input_path, tmp_path)
             unpacked = packer.unpack(tmp_path, output)
+
+            print(
+                f'{input_path.name} was succesfully extracted to the directory {output}')
 
     finally:
         if tmp_path and tmp_path.exists():
