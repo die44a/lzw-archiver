@@ -90,6 +90,61 @@ def clear(path: Path):
     shutil.rmtree(path, ignore_errors=True)
 
 
+def handle_compression(input_path, output, force, packer, archiver):
+    output = Path(output) if output else next_free(
+        input_path.with_name(input_path.name + '.lzw'))
+
+    if output.exists() and not force:
+        print(f'Error:')
+        print(f'Output file/directory already exists: {output}')
+        print(f'Warning: continuing will overwrite its contents')
+        if not confirm():
+            print('Compressing aborted')
+            return
+
+    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        tmp_path = Path(tmp.name)
+
+    try:
+        packed = packer.pack(input_path, tmp_path)
+        archiver.encode(packed, output)
+        print(f'{input_path.name} successfully compressed to {output.name}')
+    finally:
+        if tmp_path.exists():
+            tmp_path.unlink()
+
+
+def handle_extraction(input_path, output, force, packer, archiver):
+    output = Path(output or next_free(
+        Path(split_name(input_path)[0]))).resolve()
+
+    if output.exists():
+        if not force:
+            print(f'Error:')
+            print(f'Output file/directory already exists: {output}')
+            print(f'Warning: continuing will overwrite its contents')
+            affected = collect_targets(output)
+            show_targets(affected)
+            if not confirm():
+                print('Extracting aborted')
+                return
+
+        clear(output)
+
+    output.mkdir(parents=True, exist_ok=True)
+
+    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        tmp_path = Path(tmp.name)
+
+    try:
+        archiver.decode(input_path, tmp_path)
+        packer.unpack(tmp_path, output)
+        print(f'{input_path.name} successfully extracted to {output}')
+    finally:
+        if tmp_path.exists():
+            tmp_path.unlink()
+
+
 def parse_args():
     """Command line arguments parsing"""
 
@@ -149,56 +204,13 @@ def main():
             f"Error: File {input_path.name} must have .lzw extension", file=sys.stderr)
         sys.exit(ERROR_EXCEPTION)
 
-    tmp_path = None
     try:  # Using 'try' construction to delete tmp file at the end
         if args.compress:
-            output = Path(args.output) if args.output else next_free(
-                input_path.with_name(input_path.name + '.lzw'))
-
-            if output.exists() and not args.force:
-                print(f'Error:')
-                print(f'Output file/directory already exists: {output}')
-                print(f'Warning: continuing will overwrite its contents')
-                if not confirm():
-                    print('Compressing aborted')
-                    return
-
-            tmp = tempfile.NamedTemporaryFile(delete=False)
-            tmp_path = Path(tmp.name)
-            tmp.close()
-
-            packed = packer.pack(input_path, tmp_path)
-            archiver.encode(packed, output)
-
-            print(f'{input_path.name} was succesfully compressed to {output.name}')
-
+            handle_compression(input_path, args.output,
+                               args.force, packer, archiver)
         elif args.extract:
-            output = Path(args.output or split_name(input_path)[0]).resolve()
-
-            if output.exists():
-                if not args.force:
-                    print(f'Error:')
-                    print(f'Output file/directory already exists: {output}')
-                    print(f'Warning: continuing will overwrite its contents')
-                    affected = collect_targets(output)
-                    show_targets(affected)
-                    if not confirm():
-                        print('Extracting aborted')
-                        return
-
-                clear(output)
-
-            output.mkdir(parents=True, exist_ok=True)
-
-            tmp = tempfile.NamedTemporaryFile(delete=False)
-            tmp_path = Path(tmp.name)
-            tmp.close()
-
-            archiver.decode(input_path, tmp_path)
-            unpacked = packer.unpack(tmp_path, output)
-
-            print(
-                f'{input_path.name} was succesfully extracted to the directory {output}')
+            handle_extraction(input_path, args.output,
+                              args.force, packer, archiver)
 
     except (FileNotFoundError, ValueError, RuntimeError) as e:
         print(f"\nError: {e}", file=sys.stderr)
@@ -207,10 +219,6 @@ def main():
     except Exception as e:
         print(f"\nError: {e}", file=sys.stderr)
         sys.exit(ERROR_EXCEPTION)
-
-    finally:
-        if tmp_path and tmp_path.exists():
-            tmp_path.unlink()
 
 
 if __name__ == "__main__":
