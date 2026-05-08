@@ -177,7 +177,7 @@ def parse_args():
     parser.add_argument(
         '-o', '--output', type=str,
         metavar='OUTPUT',
-        help='path to the output directory after extraction')
+        help='path to the output file or directory after compressing/extracting respectively')
 
     parser.add_argument(
         '-f', '--force',
@@ -204,7 +204,7 @@ def main():
             f"Error: File {input_path.name} must have .lzw extension", file=sys.stderr)
         sys.exit(ERROR_EXCEPTION)
 
-    try:  # Using 'try' construction to delete tmp file at the end
+    try:
         if args.compress:
             handle_compression(input_path, args.output,
                                args.force, packer, archiver)
