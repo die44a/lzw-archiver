@@ -91,14 +91,21 @@ def clear(path: Path):
     shutil.rmtree(path, ignore_errors=True)
 
 def print_diff(size_before_kb, size_after_kb):
-    diff_kb = size_before_kb - size_after_kb
-    percent = (diff_kb / size_before_kb * 100) if size_before_kb > 0 else 0
-    print(f'Original size: {size_before_kb} KB')
-    print(f'Compressed size: {size_after_kb} KB')
-    if diff_kb >= 0:
-        print(f'Space saved: {diff_kb} KB | {percent:.1f}%')
+    measure, size_before, size_after = normalize_size(size_before_kb, size_after_kb)
+    diff = size_before - size_after
+    percent = (diff / size_before * 100) if size_before > 0 else 0
+    print(f'Original size: {size_before:.2f} {measure}')
+    print(f'Compressed size: {size_after:.2f} {measure}')
+    if diff >= 0:
+        print(f'Space saved: {diff:.2f} {measure} | {percent:.2f}%')
     else:
-        print(f'Space increased: {-diff_kb} KB | {-percent:.2f}%')
+        print(f'Space increased: {-diff:.2f} {measure} | {-percent:.2f}%')
+        
+def normalize_size(before, after):
+    if before > 1024 or after > 1024:
+        before, after = before / 1024, after / 1024
+        return 'MB', before, after
+    return 'KB', before, after
 
 def handle_compression(input_path, output, force, diff, packer, archiver):
     output = Path(output) if output else next_free(
