@@ -5,6 +5,7 @@
 import shutil
 
 from logic.packer import TarPacker
+from logic.size_calculator import SizeCalculator
 from pathlib import Path
 import tempfile
 import argparse
@@ -89,8 +90,17 @@ def clear(path: Path):
 
     shutil.rmtree(path, ignore_errors=True)
 
+def print_diff(size_before_kb, size_after_kb):
+    diff_kb = size_before_kb - size_after_kb
+    percent = (diff_kb / size_before_kb * 100) if size_before_kb > 0 else 0
+    print(f'Original size: {size_before_kb} KB')
+    print(f'Compressed size: {size_after_kb} KB')
+    if diff_kb >= 0:
+        print(f'Space saved: {diff_kb} KB | {percent:.1f}%')
+    else:
+        print(f'Space increased: {-diff_kb} KB | {-percent:.2f}%')
 
-def handle_compression(input_path, output, force, packer, archiver):
+def handle_compression(input_path, output, force, diff, packer, archiver):
     output = Path(output) if output else next_free(
         input_path.with_name(input_path.name + '.lzw'))
 
@@ -101,6 +111,10 @@ def handle_compression(input_path, output, force, packer, archiver):
         if not confirm():
             print('Compressing aborted')
             return
+        
+    
+    calculator = SizeCalculator()
+    original_size = calculator.calculate(input_path)
 
     with tempfile.NamedTemporaryFile(delete=False) as tmp:
         tmp_path = Path(tmp.name)
@@ -108,7 +122,9 @@ def handle_compression(input_path, output, force, packer, archiver):
     try:
         packed = packer.pack(input_path, tmp_path)
         archiver.encode(packed, output)
-        print(f'{input_path.name} successfully compressed to {output.name}')
+        compressed_size = calculator.calculate(output)
+        print(f'{input_path.name} was successfully compressed to {output}')
+        print_diff(original_size, compressed_size)
     finally:
         if tmp_path.exists():
             tmp_path.unlink()
@@ -132,14 +148,14 @@ def handle_extraction(input_path, output, force, packer, archiver):
         clear(output)
 
     output.mkdir(parents=True, exist_ok=True)
-
+    
     with tempfile.NamedTemporaryFile(delete=False) as tmp:
         tmp_path = Path(tmp.name)
 
     try:
         archiver.decode(input_path, tmp_path)
         packer.unpack(tmp_path, output)
-        print(f'{input_path.name} successfully extracted to {output}')
+        print(f'{input_path.name} was successfully extracted to {output}')
     finally:
         if tmp_path.exists():
             tmp_path.unlink()
@@ -183,6 +199,12 @@ def parse_args():
         '-f', '--force',
         action='store_true',
         help='overwrite existing files and directories without prompting')
+    
+    parser.add_argument(
+        '-d', '--diff',
+        action='store_true',
+        help='show difference in sizes between original and compressed file/directory'
+    )
 
     return parser.parse_args()
 
@@ -207,7 +229,7 @@ def main():
     try:
         if args.compress:
             handle_compression(input_path, args.output,
-                               args.force, packer, archiver)
+                               args.force, args.diff, packer, archiver)
         elif args.extract:
             handle_extraction(input_path, args.output,
                               args.force, packer, archiver)

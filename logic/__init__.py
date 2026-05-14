@@ -1,3 +1,3 @@
 from .lzw import LZWArchiver
 
-__all__ = ['LZWArchiver']
+__all__ = ['LZWArchiver', 'SizeCalculator']
