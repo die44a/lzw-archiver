@@ -13,4 +13,9 @@ class SizeCalculator():
         Returns:
             int: size of file/directory in KBs
         """
-        return 0
+        path = Path(path)
+        
+        if path.is_file:
+            return path.stat().st_size
+        
+        return sum(f.stat().st_size for f in path.rglob('*') if f.is_file())

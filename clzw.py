@@ -124,7 +124,8 @@ def handle_compression(input_path, output, force, diff, packer, archiver):
         archiver.encode(packed, output)
         compressed_size = calculator.calculate(output)
         print(f'{input_path.name} was successfully compressed to {output}')
-        print_diff(original_size, compressed_size)
+        if diff:
+            print_diff(original_size, compressed_size)
     finally:
         if tmp_path.exists():
             tmp_path.unlink()
