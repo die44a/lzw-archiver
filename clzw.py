@@ -90,8 +90,10 @@ def clear(path: Path):
 
     shutil.rmtree(path, ignore_errors=True)
 
+
 def print_diff(size_before_kb, size_after_kb):
-    measure, size_before, size_after = normalize_size(size_before_kb, size_after_kb)
+    measure, size_before, size_after = normalize_size(
+        size_before_kb, size_after_kb)
     diff = size_before - size_after
     percent = (diff / size_before * 100) if size_before > 0 else 0
     print(f'Original size: {size_before:.2f} {measure}')
@@ -100,12 +102,14 @@ def print_diff(size_before_kb, size_after_kb):
         print(f'Space saved: {diff:.2f} {measure} | {percent:.2f}%')
     else:
         print(f'Space increased: {-diff:.2f} {measure} | {-percent:.2f}%')
-        
+
+
 def normalize_size(before, after):
     if before > 1024 or after > 1024:
         before, after = before / 1024, after / 1024
         return 'MB', before, after
     return 'KB', before, after
+
 
 def handle_compression(input_path, output, force, diff, packer, archiver):
     output = Path(output) if output else next_free(
@@ -118,8 +122,7 @@ def handle_compression(input_path, output, force, diff, packer, archiver):
         if not confirm():
             print('Compressing aborted')
             return
-        
-    
+
     calculator = SizeCalculator()
     original_size = calculator.calculate(input_path)
 
@@ -156,7 +159,7 @@ def handle_extraction(input_path, output, force, packer, archiver):
         clear(output)
 
     output.mkdir(parents=True, exist_ok=True)
-    
+
     with tempfile.NamedTemporaryFile(delete=False) as tmp:
         tmp_path = Path(tmp.name)
 
@@ -173,7 +176,7 @@ def parse_args():
     """Command line arguments parsing"""
 
     parser = argparse.ArgumentParser(
-        prog='LZW-Archiver',
+        prog='clzw.py',
         description=f'Compresses or extracts files from specified file or directory',
         epilog=f'Author: {__author__} <{__email__}>')
 
@@ -207,7 +210,7 @@ def parse_args():
         '-f', '--force',
         action='store_true',
         help='overwrite existing files and directories without prompting')
-    
+
     parser.add_argument(
         '-d', '--diff',
         action='store_true',
