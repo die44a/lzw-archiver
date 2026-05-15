@@ -26,14 +26,15 @@ Launch example: python clzw.py -c example.txt
 implementation details:
 
 - `clzw.py`:
-    - Parses command line arguments
-    - Validates inputs
-    - Handles safe overwriting
+    - parses command line arguments
+    - validates inputs
+    - handles safe overwriting
     - generates a free output name when not provided
     - removes old target in force mode
-    - Coordinates full pipeline using temporary files:
+    - coordinates full pipeline using temporary files:
         - compression: `TarPacker.pack(...)` -> `LZWArchiver.encode(...)`
         - extraction: `LZWArchiver.decode(...)` -> `TarPacker.unpack(...)`
+    - shows difference in sizes between compressed and original if neccessary flag used
 
 - `logic/lzw.py`:
   - implements LZW encode/decode
@@ -47,3 +48,6 @@ implementation details:
   - `TarPacker.unpack(...)` restores archive content with `tarfile.extractall(...)`
 
 - `logic/constants.py` stores all algorithm-related constants in one place.
+
+- `logic/size_calculator.py`:
+  - `SizeCalculator.calculate(...)`  calculates files/directories sizes in bytes
