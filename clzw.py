@@ -105,10 +105,14 @@ def print_diff(size_before_kb, size_after_kb):
 
 
 def normalize_size(before, after):
-    if before > 1024 or after > 1024:
-        before, after = before / 1024, after / 1024
-        return 'MB', before, after
-    return 'KB', before, after
+    max_val = max(before, after)
+
+    if max_val >= 1024**2:
+        return 'MB', before / (1024**2), after / (1024**2)
+    elif max_val >= 1024:
+        return 'KB', before / 1024, after / 1024
+    else:
+        return 'B', before, after
 
 
 def handle_compression(input_path, output, force, diff, packer, archiver):
@@ -126,7 +130,7 @@ def handle_compression(input_path, output, force, diff, packer, archiver):
     calculator = SizeCalculator()
     original_size = calculator.calculate(input_path)
 
-    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.tar') as tmp:
         tmp_path = Path(tmp.name)
 
     try:
@@ -160,7 +164,7 @@ def handle_extraction(input_path, output, force, packer, archiver):
 
     output.mkdir(parents=True, exist_ok=True)
 
-    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.tar') as tmp:
         tmp_path = Path(tmp.name)
 
     try:
